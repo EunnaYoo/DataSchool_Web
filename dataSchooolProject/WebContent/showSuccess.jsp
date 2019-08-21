@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<script type="text/javascript">
+var msg = ${requestScope.successMsg};
+</script>
+<% 
+out.println("<script>alert(${requestScope.successMsg});"
+	+ "location.href='index.html'</script>");
+%>
 </body>
 </html>

@@ -24,7 +24,9 @@ public class DataController extends HttpServlet {
 		String command = request.getParameter("command");
 		try {
 			if (command.equals("login")) {
-				indentify(request, response);
+				identify(request, response);
+			} else if(command.equals("join")) {
+				identifyJoin(request, response);
 			}
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
@@ -33,20 +35,43 @@ public class DataController extends HttpServlet {
 		}
 	}
 	
-	public void indentify(HttpServletRequest request, HttpServletResponse response)
+	public void identify(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String url = "showError.jsp";
 		HttpSession session = request.getSession();
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		try {
-			if(DataService.indentify(id, pw)) {
+			if(DataService.identify(id, pw)) {
 				session.setAttribute("id", id);
 				session.setAttribute("pw", pw);
-				url = "index.html";
+				url = "intro.jsp";
+			}else if(!DataService.identify(id, pw)) {
+				session.invalidate();
+				request.setAttribute("check", "로그인에 실패했습니다");
+				url = "login.jsp";
 			}
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
+		}
+		request.getRequestDispatcher(url).forward(request, response);
+	}
+	
+	public void identifyJoin(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String url = "showError.jsp";
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		try {
+			if(DataService.identifyJoin(id, pw)) {
+				url = "login.jsp";
+			}else if(!DataService.identifyJoin(id, pw)) {
+				request.setAttribute("check", "가입에 실패했습니다");
+				url = "Join.jsp";
+			}
+		} catch (Exception s) {
+			request.setAttribute("errorMsg", s.getMessage());
+			s.printStackTrace();
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}

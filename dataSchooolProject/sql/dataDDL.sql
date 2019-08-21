@@ -1,10 +1,10 @@
-DROP TABLE client cascade constraint;
+DROP TABLE users cascade constraint;
 
 --DROP SEQUENCE client_number_seq;
 
-CREATE TABLE client (
-       id               	VARCHAR2(20) PRIMARY KEY,
-       password         	VARCHAR2(20) NOT NULL
+CREATE TABLE users (
+       id               	VARCHAR2(10) PRIMARY KEY,
+       password         	VARCHAR2(10) NOT NULL
 );
 
 --CREATE SEQUENCE client_number_seq;
