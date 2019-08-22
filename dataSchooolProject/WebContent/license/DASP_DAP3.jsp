@@ -38,7 +38,7 @@ padding: 15px;
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-  <img class="img" src="images/off.png" onclick="location.href='end'" style="width:10%" align="right">
+  <img class="img" src="../images/off.png" onclick="location.href='../end'" style="width:10%" align="right">
     </p>
   </header>
 

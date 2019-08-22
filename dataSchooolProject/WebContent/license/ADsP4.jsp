@@ -10,10 +10,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.w3-sidebar a {
-	font-family: "Roboto", sans-serif
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide,P {font-family: "Montserrat", sans-serif;
+padding: 15px;
 }
-
 body, h1, h2, h3, h4, h5, h6, .w3-wide, P {
 	font-family: "Montserrat", sans-serif;
 	padding: 15px;
@@ -61,15 +61,55 @@ a {
   <img class="img" src="../images/off.png" onclick="location.href='../end'" style="width:10%" align="right">
     </p>
   </header>
-  <div class="contents" align="left">
-		<table valign="bottom">
-			<td><a href="SQLD_SQLP.jsp" class="tab">자격소개</a></td>
-			<td><a href="SQLD_SQLP2.jsp" class="tab">시험주요내용</a></td>
-			<td><a href="SQLD_SQLP3.jsp" class="tab">출제문항및배점</a></td>
-			<td><a href="SQLD_SQLP4.jsp" class="tab">응시자합격기준</a></td>
-		</table>
-	</div>
-	<h4 class="content_title top">SQLD/SQLP</h4>
+		<div class="contents" align="left">
+			<table valign="bottom">
+				<td><a href="../intro.jsp" class="tab">자격소개</a></td>
+				<td><a href="ADsP2.jsp" class="tab">시험주요내용</a></td>
+				<td><a href="ADsP3.jsp" class="tab">출제문항및배점</a></td>
+				<td><a href="ADsP4.jsp" class="tab">응시자합격기준</a></td>
+			</table>
+		</div>
+	<h4 class="content_title top">ADsP</h4>
+  <h4 class="content_title top">응시자격</h4>
+  <fieldset>
+  <table class="data top" cellpadding="0" cellspacing="0" summary="응시자격"  border="1">
+	 <colgroup>
+	 <col width="100%" />
+	 </colgroup>
+	  <tbody>
+		<tr>
+			<td>제한 없음</td>		
+		</tr>
+	 </tbody>
+  </table>
+  </fieldset>
+  <br><br>	
+  <h4 class="content_title top">합격기준</h4>
+   <fieldset>
+  <legend>합격기준</legend>
+  <table class="data top" cellpadding="0" cellspacing="0" summary="합격기준" border="1">
+	 <caption>
+	합격기준
+	 </caption>
+	 <colgroup>
+	 <col width="50%" />
+	 <col width="50%" />
+	 </colgroup>
+	 <thead>
+		<tr> 
+		  <th scope="col">합격기준</th>
+		   <th scope="col">과락기준</th>
+		</tr>
+	 </thead>
+	 <tbody>
+		<tr>
+			<td>총점 60점 이상</td>
+			<td>과목별 40% 미만</td>
+		</tr>
+	 </tbody>
+  </table>
+  </fieldset>
+</div>
 
 
 <script>

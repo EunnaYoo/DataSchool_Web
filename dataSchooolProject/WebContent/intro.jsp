@@ -18,6 +18,16 @@ padding: 15px;
     max-width: 300px;
     max-height: 300px;
 }
+a:active {
+  color: red;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  background-color: #888;
+ }
 </style>
 <body class="w3-content" style="max-width:1200px">
 
@@ -46,6 +56,15 @@ padding: 15px;
     </p>
   </header>
 
+		<div class="contents" align="left">
+			<table valign="bottom">
+				<td><a href="intro.jsp" class="tab">자격소개</a></td>
+				<td><a href="license/ADsP2.jsp" class="tab">시험주요내용</a></td>
+				<td><a href="license/ADsP3.jsp" class="tab">출제문항및배점</a></td>
+				<td><a href="license/ADsP4.jsp" class="tab">응시자합격기준</a></td>
+			</table>
+		</div>
+		  		<h4 class="content_title top">ADsP</h4>
 <h4 class="content_title top">국가 공인 자격</h4>
       <h5 class="sub_title top">관련 근거</h5>
             <P class="indent">
@@ -88,7 +107,7 @@ padding: 15px;
          <p class="indent">
          <fieldset>
            <legend>데이터 분석 준전문가의 직무</legend>
-           <table class="data" summary="데이터 분석 준전문가의 직무">
+           <table class="data" summary="데이터 분석 준전문가의 직무" border="1">
           <caption>
          데이터 분석 준전문가의 직무
           </caption>
@@ -175,6 +194,13 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
+$(function name() {
+	$('a').click(function() {
+		$('a').removeClass()
+			$(this).addClass('on')
+	})
+})
 </script>
 
 </body>

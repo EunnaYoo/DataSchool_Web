@@ -14,6 +14,9 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/common/front/css/certificate.css">
 <style>
+a:active {
+  color: red;
+}
 .w3-sidebar a {
 	font-family: "Roboto", sans-serif
 }

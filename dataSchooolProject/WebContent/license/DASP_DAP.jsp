@@ -14,6 +14,7 @@
 body,h1,h2,h3,h4,h5,h6,.w3-wide,P {font-family: "Montserrat", sans-serif;
 padding: 15px;
 }
+
 </style>
 <body class="w3-content" style="max-width:1200px">
 
@@ -38,7 +39,7 @@ padding: 15px;
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-  <img class="img" src="images/off.png" onclick="location.href='end'" style="width:10%" align="right">
+  <img class="img" src="../images/off.png" onclick="location.href='../end'" style="width:10%" align="right">
     </p>
   </header>
 

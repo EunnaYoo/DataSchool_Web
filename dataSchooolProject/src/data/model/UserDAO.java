@@ -95,6 +95,7 @@ public class UserDAO {
 		}
 		if(!name.contains(id) && id != "" && id.length() > 0
 				&& id.length() < 10 && pw.length() > 0 && pw.length() < 10) {
+			
 			return addUser(id, pw);
 		}else {
 			return false;
