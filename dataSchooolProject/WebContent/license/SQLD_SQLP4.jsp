@@ -14,15 +14,12 @@
 body,h1,h2,h3,h4,h5,h6,.w3-wide,P {font-family: "Montserrat", sans-serif;
 padding: 15px;
 }
-.img{
-    max-width: 300px;
-    max-height: 300px;
-}
 </style>
+
 <body class="w3-content" style="max-width:1200px">
 
 <!-- Sidebar/menu -->
-<jsp:include page="sidenav.html"/>
+<jsp:include page="sidenav2.html"/>
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
@@ -36,17 +33,25 @@ padding: 15px;
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:250px">
 
+
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-      <img class="img" src="images/off.png" onclick="location.href='end'" style="width:10%" align="right">
+  <img class="img" src="images/off.png" onclick="location.href='end'" style="width:10%" align="right">
     </p>
   </header>
-
-<h4 class="content_title top">국가 공인 자격</h4>
+  <div class="contents">
+	<ul id="tab" class="tab top">
+			<li><a href="/da.db?cmd=snb_sqlp_1" class="tab"><img src="/publishing/img/certificate/tab1_snb21_on.gif" width="90px" height="27px" alt="자격소개"></a></li>
+			<li><a href="/da.db?cmd=snb_sqlp_2" class="tab"><img src="/publishing/img/certificate/tab2_snb21.gif" width="90px" height="27px" alt="시험주요내용"></a></li>
+			<li><a href="/da.db?cmd=snb_sqlp_3" class="tab"><img src="/publishing/img/certificate/tab3_snb21.gif" width="90px" height="27px" alt="출제문항및배점"></a></li>
+			<li><a href="/da.db?cmd=snb_sqlp_4" class="tab"><img src="/publishing/img/certificate/tab4_snb21.gif" width="90px" height="27px" alt="응시자격및합격기준"></a></li>
+		</ul>
+		</div>
+	<h4 class="content_title top">SQLD/SQLP</h4>
       <h5 class="sub_title top">관련 근거</h5>
             <P class="indent">
             <font color="#FF0000"><b>자격기본법</b></font><BR>
@@ -135,6 +140,8 @@ padding: 15px;
          </tbody>
          </table>
          </fieldset>   
+         
+         
 
   
 
