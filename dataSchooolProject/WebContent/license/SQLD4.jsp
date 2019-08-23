@@ -21,20 +21,23 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide, P {
 	font-family: "Montserrat", sans-serif;
 	padding: 15px;
 }
-.img{
-    max-width: 300px;
-    max-height: 300px;
+
+.img {
+	max-width: 300px;
+	max-height: 300px;
 }
+
 a:active {
-  color: red;
+	color: red;
 }
+
 a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 5px 10px;
-  background-color: #888;
- }
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 5px 10px;
+	background-color: #888;
+}
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -44,7 +47,7 @@ a {
 
 	<!-- Top menu on small screens -->
 	<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-		<div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+		<div class="w3-bar-item w3-padding-24 w3-wide">DataSchool</div>
 		<a href="javascript:void(0)"
 			class="w3-bar-item w3-button w3-padding-24 w3-right"
 			onclick="w3_open()"><i class="fa fa-bars"></i></a>
@@ -64,19 +67,58 @@ a {
 		<!-- Top header -->
 		<header class="w3-container w3-xlarge">
 			<p class="w3-right">
-				<img class="img" src="../images/off.png" onclick="location.href='../end'"
-					style="width: 10%" align="right">
+				<img class="img" src="../images/off.png"
+					onclick="location.href='../end'" style="width: 10%" align="right">
 			</p>
 		</header>
 		<div class="contents" align="left">
 			<table valign="bottom">
-				<td><a href="SQLD_SQLP.jsp" class="tab">자격소개</a></td>
-				<td><a href="SQLD_SQLP2.jsp" class="tab">시험주요내용</a></td>
-				<td><a href="SQLD_SQLP3.jsp" class="tab">출제문항및배점</a></td>
-				<td><a href="SQLD_SQLP4.jsp" class="tab">응시자합격기준</a></td>
+				<tr>
+					<td><a href="SQLD.jsp" class="tab">자격소개</a></td>
+					<td><a href="SQLD2.jsp" class="tab">시험주요내용</a></td>
+					<td><a href="SQLD3.jsp" class="tab">출제문항및배점</a></td>
+					<td><a href="SQLD4.jsp" class="tab">응시자합격기준</a></td>
+				</tr>
 			</table>
 		</div>
-		<h4 class="content_title top">SQLD/SQLP</h4>
+		<h4 class="content_title top"><b>국가 공인 자격 SQLD</b></h4>
+		<h4 class="content_title top">☞ 응시자격</h4>
+		<fieldset>
+			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="응시자격">
+				<colgroup>
+					<col width="100%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<td>제한 없음</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<hr>
+
+		<h4 class="content_title top">☞ 합격기준</h4>
+		<fieldset>
+			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="합격기준">
+				<colgroup>
+					<col width="50%" />
+					<col width="50%" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">합격기준</th>
+						<th scope="col">과락기준</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>총점 60점 이상</td>
+						<td>과목별 40% 미만</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</div>
 	<script>
 		// Accordion 
 		function introduce() {

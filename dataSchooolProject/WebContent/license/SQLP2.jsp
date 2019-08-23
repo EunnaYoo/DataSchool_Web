@@ -47,7 +47,7 @@ a {
 
 	<!-- Top menu on small screens -->
 	<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-		<div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+		<div class="w3-bar-item w3-padding-24 w3-wide">DataSchool</div>
 		<a href="javascript:void(0)"
 			class="w3-bar-item w3-button w3-padding-24 w3-right"
 			onclick="w3_open()"><i class="fa fa-bars"></i></a>
@@ -73,20 +73,21 @@ a {
 		</header>
 		<div class="contents" align="left">
 			<table valign="bottom">
-				<td><a href="ADP.jsp" class="tab">자격소개</a></td>
-				<td><a href="ADP2.jsp" class="tab">시험주요내용</a></td>
-				<td><a href="ADP3.jsp" class="tab">출제문항및배점</a></td>
-				<td><a href="ADP4.jsp" class="tab">응시자합격기준</a></td>
+				<tr>
+					<td><a href="SQLP.jsp" class="tab">자격소개</a></td>
+					<td><a href="SQLP2.jsp" class="tab">시험주요내용</a></td>
+					<td><a href="SQLP3.jsp" class="tab">출제문항및배점</a></td>
+					<td><a href="SQLP4.jsp" class="tab">응시자합격기준</a></td>
+				</tr>
 			</table>
 		</div>
-		<h4 class="content_title top">ADP</h4>
-		<h4 class="content_title top">과목 및 내용</h4>
-		<p class="indent">데이터 분석 전문가 자격검정 시험의 과목은 총 5과목으로 구성되어 있으며 데이터 이해
-			과목을 바탕으로 데이터 분석 기획, 데이터 분석, 데이터 시각화를 수행하는 능력을 검정합니다.</p>
-
+		<h4 class="content_title top"><b>국가 공인 자격 SQLP</b></h4>
+		<h4 class="content_title top">☞ 과목 및 내용</h4>
+		<p class="indent">SQL 전문가 자격시험의 과목은 총 3과목으로 구성되어 있으며 데이터 모델링의 이해
+			과목을 바탕으로 SQL 기본 및 활용, SQL 고급활용 및 튜닝을 수행하는 능력을 검정합니다.</p>
+			
 		<fieldset>
-			<legend>과목 및 내용</legend>
-			<table class="data top" cellpadding="0" cellspacing="0" border="1">
+			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="과목 및 내용">
 				<colgroup>
 					<col width="30%" />
 					<col width="30%" />
@@ -102,274 +103,260 @@ a {
 				</thead>
 				<tbody>
 					<tr>
-						<th rowspan="11">데이터 이해</th>
-						<td class="last" rowspan="3">데이터의 이해</td>
+						<th rowspan="10">데이터 모델링의 이해</th>
+						<td class="last" rowspan="5">데이터 모델링의 이해</td>
 						<td class="last"><ul class="list">
-								<li>데이터와 정보</li>
+								<li>데이터모델의 이해</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>데이터베이스의 정의와 특징</li>
+								<li>엔터티</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>데이터베이스 활용</li>
-							</ul></td>
-					</tr>
-
-					<tr>
-						<td class="last" rowspan="5">데이터의 가치와 미래</td>
-						<td class="last"><ul class="list">
-								<li>빅데이터의 이해</li>
+								<li>속성</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>빅데이터의 가치와 영향</li>
+								<li>관계</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>비즈니스 모델</li>
+								<li>식별자</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last" rowspan="5">데이터 모델과 성능</td>
+						<td class="last"><ul class="list">
+								<li>정규화와 성능</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>위기 요인과 통제 방안</li>
+								<li>반정규화와 성능</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>미래의 빅데이터</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<td class="last" rowspan="3">가치 창조를 위한 데이터 사이언스와<br> 전략
-							인사이트
-						</td>
-						<td class="last"><ul class="list">
-								<li>빅데이터 분석과 전략 인사이트</li>
+								<li>대용량 데이터에 따른 성능</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>전략 인사이트 도출을 위한 필요 역량</li>
+								<li>DB 구조와 성능</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>빅데이터 그리고 데이터 사이언스의 미래</li>
+								<li>분산DB 데이터에 따른 성능</li>
 							</ul></td>
 					</tr>
 					<tr>
-						<th rowspan="8">데이터 처리 기술 이해</th>
-						<td class="last" rowspan="5">데이터 처리 프로세스</td>
+						<th rowspan="20">SQL 기본 및 활용</th>
+						<td class="last" rowspan="9">SQL 기본</td>
 						<td class="last"><ul class="list">
-								<li>ETL(Extraction, Transformation and Load)</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<td class="last"><ul class="list">
-								<li>CDC(Change Data Capture)</li>
+								<li>정보 요구 사항</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>EAI(Enterprise Application Integration)</li>
+								<li>DDL</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>데이터 연계 및 통합 기법 요약</li>
+								<li>DML</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>대용량 비정형 데이터 처리</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<td class="last" rowspan="3">데이터 처리 기술</td>
-						<td class="last"><ul class="list">
-								<li>분산 데이터 저장 기술</li>
+								<li>TCL</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>분산 컴퓨팅 기술</li>
+								<li>WHERE 절</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>클라우드 인프라 기술</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<th rowspan="6">데이터 분석 기획</th>
-						<td class="last" rowspan="4">데이터 분석 기획의 이해</td>
-						<td class="last"><ul class="list">
-								<li>분석 기획 방향성 도출</li>
+								<li>FUNCTION</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>분석 방법론</li>
+								<li>GROUP BY, HAVING 절</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>분석 과제 발굴</li>
+								<li>ORDER BY 절</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>분석 프로젝트 관리 방안</li>
+								<li>조인</li>
 							</ul></td>
 					</tr>
 					<tr>
-						<td class="last" rowspan="2">분석 마스터 플랜</td>
+						<td class="last" rowspan="8">SQL 활용</td>
 						<td class="last"><ul class="list">
-								<li>마스터 플랜 수립</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<td class="last"><ul class="list">
-								<li>분석 거버넌스 체계 수립</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<th rowspan="13">데이터 분석</th>
-						<td class="last" rowspan="3">R기초와 데이터 마트</td>
-						<td class="last"><ul class="list">
-								<li>R기초</li>
+								<li>표준조인</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>데이터 마트</li>
+								<li>집합연산자</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>결측값 처리와 이상값 검색</li>
-							</ul></td>
-					</tr>
-
-					<tr>
-						<td class="last" rowspan="4">통계분석</td>
-						<td class="last"><ul class="list">
-								<li>통계학 개론</li>
+								<li>계층형 질의</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>기초 통계분석</li>
+								<li>서브쿼리</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>다변량 분석</li>
+								<li>그룹 함수</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>시계열 예측</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<td class="last" rowspan="4">정형 데이터 마이닝</td>
-						<td class="last"><ul class="list">
-								<li>데이터 마이닝 개요</li>
+								<li>윈도우 함수</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>분류분석(Classification)</li>
-							</ul></td>
-					</tr>
-
-					<tr>
-						<td class="last"><ul class="list">
-								<li>군집분석(Clustering)</li>
+								<li>DCL</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>연관분석(Association Analysis)</li>
+								<li>절차형 SQL</li>
 							</ul></td>
 					</tr>
-
-
+					
 					<tr>
-						<td class="last" rowspan="2">비정형 데이터 마이닝</td>
-						<td class="last"><ul class="list">
-								<li>텍스트 마이닝</li>
-							</ul></td>
+					<td class="last" rowspan="3">SQL 최적화 기본 원리</td>
+					<td class="last"><ul class="list">
+							<li>옵티마이저와 실행계획</li>
+						</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>사회연결망 분석</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<th rowspan="11">데이터 시각화</th>
-						<td class="last" rowspan="4">시각화 인사이트 프로세스</td>
-						<td class="last"><ul class="list">
-								<li>시각화 인사이트 프로세스의 의미</li>
+								<li>인덱스 기본</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>탐색(1단계)</li>
+								<li>조인 수행 원리</li>
+							</ul></td>
+					</tr>
+					
+					<tr>
+						<th rowspan="18">SQL<br> 고급활용 및 튜닝<br>
+						</th>
+						<td class="last" rowspan="4">아키텍처 기반<br> 튜닝 원리<br></td>
+						<td class="last"><ul class="list">
+								<li>데이터베이스 아키텍처</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>분석(2단계)</li>
+								<li>SQL 파싱 부하</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>활용(3단계)</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<td class="last" rowspan="4">시각화 디자인</td>
-						<td class="last"><ul class="list">
-								<li>시각화의 정의</li>
+								<li>DB Call과 네트워크 부하</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>시각화 프로세스</li>
+								<li>데이터베이스 I/O 원리</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last" rowspan="3">Lock과 트랜잭션 동시성제어<br></td>
+						<td class="last"><ul class="list">
+								<li>Lock</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>시각화 방법</li>
+								<li>트랜잭션</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>빅데이터와 시각화 디자인</li>
+								<li>동시성 제어</li>
 							</ul></td>
 					</tr>
+					
 					<tr>
-						<td class="last" rowspan="3">시각화 구현</td>
+						<td class="last" rowspan="2">SQL 옵티아미저 원리<br></td>
 						<td class="last"><ul class="list">
-								<li>시각화 구현 개요</li>
-							</ul></td>
-					</tr>
-					<tr>
-						<td class="last"><ul class="list">
-								<li>분석 도구를 이용한 시각화 구현: R</li>
+								<li>옵티마이저</li>
 							</ul></td>
 					</tr>
 					<tr>
 						<td class="last"><ul class="list">
-								<li>라이브러리 기반의 시각화 구현: D3.js</li>
+								<li>쿼리변환</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last" rowspan="4">인덱스와 조인<br></td>
+						<td class="last"><ul class="list">
+								<li>인덱스 기본 원리</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last"><ul class="list">
+								<li>인덱스 튜닝</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last"><ul class="list">
+								<li>조인 기본 원리</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last"><ul class="list">
+								<li>고급 조인 기법</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last" rowspan="5">고급 SQL 튜닝<br></td>
+						<td class="last"><ul class="list">
+								<li>고급 SQL 활용</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last"><ul class="list">
+								<li>소스 튜닝</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last"><ul class="list">
+								<li>DML 튜닝</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last"><ul class="list">
+								<li>파티션 활용</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td class="last"><ul class="list">
+								<li>배치 프로그램 튜닝</li>
 							</ul></td>
 					</tr>
 				</tbody>

@@ -10,21 +10,35 @@
     <div id="introDetail" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="intro.jsp" class="w3-bar-item w3-button">ADsP</a>
       <a href="license/ADP.jsp" class="w3-bar-item w3-button">ADP</a>
-      <a href="license/SQLD_SQLP.jsp" class="w3-bar-item w3-button">SQLD/SQLP</a>
-      <a href="license/DASP_DAP.jsp" class="w3-bar-item w3-button">DASP/DAP</a>
+      <a href="license/SQLD.jsp" class="w3-bar-item w3-button">SQLD</a>
+      <a href="license/SQLP.jsp" class="w3-bar-item w3-button">SQLP</a>
+      <a href="license/DASP.jsp" class="w3-bar-item w3-button">DASP</a>
+      <a href="license/DAP.jsp" class="w3-bar-item w3-button">DAP</a>
     </div>
     
     <a onclick="resolve()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
       기출문제 풀기 <i class="fa fa-caret-down"></i>
     </a>
     <div id="resolveType" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button">ADsP</a>
-      <a href="#" class="w3-bar-item w3-button">SQLD</a>
-      <a href="#" class="w3-bar-item w3-button">DASP</a>
+      <a href="Test/testListADSP.jsp" class="w3-bar-item w3-button">ADsP</a>
+      <a href="Test/testListSQLD.jsp" class="w3-bar-item w3-button">SQLD</a>
+      <a href="#" class="w3-bar-item w3-button">DASP(준비중)</a>
     </div>
-    <a href="data?command=news&value=1" class="w3-bar-item w3-button" >News</a>
+    <a href="data?command=news&value=1" class="w3-bar-item w3-button"><font color = "#000000">News</font></a>
   </div>
-  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+  
+  <div>
+  <a onclick="footer()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" id="myBtn">
+      Contact <i class="fa fa-caret-down"></i></a>
+      <div id="goContact" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      	  <!-- 관련 카페로 이동 -->
+		  <a href="https://cafe.naver.com/sqlpd" class="w3-bar-item w3-button w3-padding">
+		  	<font color = "#757575">Cafe</font>
+		  </a>
+		  <a href="http://www.dbguide.net/da.db?cmd=snb5_1" class="w3-bar-item w3-button w3-padding">
+		  	<font color = "#757575">Exam Submit</font>
+		  </a>
+      </div>
+  </div>
   <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>

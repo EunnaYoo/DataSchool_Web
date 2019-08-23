@@ -10,10 +10,12 @@ import data.model.dto.UserDTO;
 import data.model.util.DBUtil;
 
 public class UserDAO {
+	
 	private static UserDAO instance = new UserDAO();
 	public static UserDAO getInstance() {
 		return instance;
 	}
+	 
 	public static UserDTO getInfo(String id) throws SQLException{
 		Connection con = null;
 		PreparedStatement pstmt = null;
