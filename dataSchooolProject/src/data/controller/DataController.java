@@ -82,11 +82,13 @@ public class DataController extends HttpServlet {
 
 	public void insertNews(HttpServletRequest request, HttpServletResponse response) {
 		int num = Integer.parseInt(request.getParameter("value"));
-		String url = "News/news" + num + ".jsp";
+		String url = "";
 		try {
-			request.setAttribute("headline", DataCrawling.getHeadline(num));
-			request.setAttribute("summary", DataCrawling.getSummary(num));
-			request.setAttribute("url", DataCrawling.getUrl(num));
+			if(num <= 5) url = "News/news1.jsp";
+			else url = "News/news2.jsp";
+			request.setAttribute("headline", DataService.getHeadline(num));
+			request.setAttribute("summary", DataService.getSummary(num));
+			request.setAttribute("url", DataService.getUrl(num));
 			request.setAttribute("value", num);
 			request.getRequestDispatcher(url).forward(request, response);
 		} catch (Exception s) {

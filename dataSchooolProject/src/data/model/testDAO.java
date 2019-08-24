@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import data.model.dto.UserDTO;
 import data.model.util.DBUtil;
 
 public class testDAO {
@@ -25,6 +27,9 @@ public class testDAO {
 			pstmt = con.prepareStatement("select test_content from test where test_num=?");
 			pstmt.setInt(1, testNum);
 			rset = pstmt.executeQuery();
+			if(rset.next()){
+				result = rset.getString(1);
+			}
 			// to-do) rset 가져오는 메소드 만들기
 		} finally {
 			DBUtil.close(con, pstmt, rset);
@@ -44,7 +49,7 @@ public class testDAO {
 	public static void main(String[] args) {
 		try {
 			System.out.println(111);
-			System.out.println(getTestContent(1));
+			System.out.println(getTestContent(3));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

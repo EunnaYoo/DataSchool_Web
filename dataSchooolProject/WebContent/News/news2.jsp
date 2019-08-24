@@ -13,104 +13,28 @@
 a:active {
   color: red;
 }
-.w3-sidebar a {
-	font-family: "Roboto", sans-serif
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide,P {font-family: "Montserrat", sans-serif;
+padding: 15px;
 }
 
-body, h1, h2, h3, h4, h5, h6, .w3-wide, P {
-	font-family: "Montserrat", sans-serif;
-	padding: 15px;
-}
 .img{
     max-width: 300px;
     max-height: 300px;
 }
-
-.wrapper {
+.wrapper{
 	display: grid;
-	grid-template-columns: repeat(2, 2fr);
-	gird-gap: 1em;
-	gird-auto-rows: minmax(100px, auto);
-	gird-auto-columns: minmax(100px, auto);
+	grid-template-columns:repeat(2,2fr);
+	gird-gap:1em;
+	gird-auto-rows:minmax(100px, auto);
+	gird-auto-columns:minmax(100px, auto);
 }
-
-.wrapper>div {
-	background: #eee;
-	padding: 1em;
+.wrapper > div{
+	background:#eee;
+	padding:1em;
 }
-
-.wrapper>div:nth-child(2), div:nth-child(3) {
-	background: #ddd;
-}
-
-.pagination-box {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	vertical-align: middle;
-	font-family: Arial;
-	background: #ffffff;
-	font-weight: 400;
-	border-radius: 0.2rem;
-	min-height: 2rem;
-	font-size: 1rem;
-	&:
-	first-child
-	{
-	margin-top
-	:
-	0;
-}
-
-&
-:last-child {
-	margin-bottom: 0;
-}
-
-.item.disabled, .item.disabled:hover {
-	cursor: default;
-	background-color: transparent;
-}
-
-&>
-.item:first-child {
-	border-radius: 0.3rem 0 0 0.3rem;
-}
-
-&
-.tiny { .item { padding:0.4rem0.5rem!important;
-	
-}
-
-}
-&
-.small { .item { padding:0.6rem0.8rem!important;
-	
-}
-
-}
-&
-.big { .item { padding:1rem1.2rem!important;
-	
-}
-
-}
-.item {
-	position: relative;
-	vertical-align: middle;
-	line-height: 1;
-	text-decoration: none;
-	text-align: center;
-	padding: 0.8rem 1rem;
-	text-transform: none; &: not (.disabled).active { font-weight : 400;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-}
+.wrapper > div:nth-child(2), div:nth-child(3){
+	background:#ddd;
 }
 
 </style>
@@ -171,17 +95,17 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide, P {
 				id="nav" role="presentation">
 				<tbody>
 					<tr valign="top">
-						<td class="b navend">
-							<a href="data?command=news&value=1" class="active item">1</a> 
-							<a href="data?command=news&value=2" class="item">2</a> 
-							<a href="data?command=news&value=3" class="item">3</a> 
-							<a href="data?command=news&value=4" class="item">4</a>
-							<a href="data?command=news&value=5" class="item">5</a>
-						<td aria-level="3" class="b navend" role="heading">
-							<a class="pn" href="data?command=news&value=6" style="text-align: left"> 
-								<span style="display: block; margin-left: 5px">다음</span>
+					<td aria-level="3" class="b navend" role="heading">
+							<a class="pn" href="data?command=news&value=5" style="text-align: left"> 
+								<span style="display: block; margin-left: 5px">이전</span>
 							</a>
 						</td>
+						<td class="b navend">
+							<a href="data?command=news&value=6" class="active item">6</a> 
+							<a href="data?command=news&value=7" class="item">7</a> 
+							<a href="data?command=news&value=8" class="item">8</a> 
+							<a href="data?command=news&value=9" class="item">9</a> 
+							<a href="data?command=news&value=10" class="item">10</a> 
 					</tr>
 				</tbody>
 			</table>
@@ -208,6 +132,15 @@ function resolve() {
 	    x.className = x.className.replace(" w3-show", "");
 	  }
 	}
+	
+function footer() {
+	  var x = document.getElementById("goContact");
+	  if (x.className.indexOf("w3-show") == -1) {
+	    x.className += " w3-show";
+	  } else {
+	    x.className = x.className.replace(" w3-show", "");
+	}
+}
 
 // Click on the "Jeans" link on page load to open the accordion for demo purposes
 document.getElementById("myBtn").click();

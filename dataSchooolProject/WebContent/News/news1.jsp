@@ -220,6 +220,15 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide, P {
 				x.className = x.className.replace(" w3-show", "");
 			}
 		}
+		
+		function footer() {
+			  var x = document.getElementById("goContact");
+			  if (x.className.indexOf("w3-show") == -1) {
+			    x.className += " w3-show";
+			  } else {
+			    x.className = x.className.replace(" w3-show", "");
+			}
+		}
 
 		// Click on the "Jeans" link on page load to open the accordion for demo purposes
 		document.getElementById("myBtn").click();
