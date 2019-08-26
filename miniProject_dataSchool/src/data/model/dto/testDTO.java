@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class testDTO {
+public class TestDTO {
 	
 	private int num;
 	private String testIdenty;

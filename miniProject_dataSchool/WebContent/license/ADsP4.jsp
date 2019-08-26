@@ -37,7 +37,7 @@ a {
 <body class="w3-content" style="max-width:1200px">
 
 <!-- Sidebar/menu -->
-<jsp:include page="sidenav2.html"/>
+<jsp:include page="../sidenav.jsp"/>
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
@@ -71,7 +71,6 @@ a {
 		</div>
 	<h4 class="content_title top">ADsP</h4>
   <h4 class="content_title top">응시자격</h4>
-  <fieldset>
   <table class="data top" cellpadding="0" cellspacing="0" summary="응시자격"  border="1">
 	 <colgroup>
 	 <col width="100%" />
@@ -82,7 +81,6 @@ a {
 		</tr>
 	 </tbody>
   </table>
-  </fieldset>
   <br><br>	
   <h4 class="content_title top">합격기준</h4>
    <fieldset>

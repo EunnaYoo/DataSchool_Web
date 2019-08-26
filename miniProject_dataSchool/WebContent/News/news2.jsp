@@ -41,7 +41,7 @@ padding: 15px;
 <body class="w3-content" style="max-width:1200px">
 
 <!-- Sidebar/menu -->
-<jsp:include page="../sidenav.html"/>
+<jsp:include page="../sidenav.jsp"/>
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">

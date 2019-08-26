@@ -43,7 +43,7 @@ a {
 <body class="w3-content" style="max-width: 1200px">
 
 	<!-- Sidebar/menu -->
-	<jsp:include page="sidenav3.html" />
+	<jsp:include page="../sidenav.jsp" />
 
 	<!-- Top menu on small screens -->
 	<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
@@ -77,7 +77,7 @@ a {
 			<br><br>
 			<table style="margin-left: auto; margin-right: auto;" border = "2" WIDTH = "100%">
 				<tr>
-					<td><a href = "SQLD21.jsp">21회차</a></td>
+					<td><a href = "${pageContext.request.contextPath}/data?command=test&value=21&value2=01&value3=1" >21회차</a></td>
 				</tr>
 			</table>
 		</h4>

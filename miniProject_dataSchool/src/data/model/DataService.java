@@ -27,6 +27,53 @@ public class DataService {
 		}
 		return result;
 	}
+	
+	public static String getTestContent(int testNum) throws MessageException {
+		try {
+			return TestDAO.getTestContent(testNum);
+		} catch (SQLException e) {
+			throw new MessageException("유효하지 않은 정보입니다");
+		}
+	}
+	
+	public static String getTestScript(int testNum) throws MessageException {
+		try {
+			return TestDAO.getTestScript(testNum);
+		} catch (SQLException e) {
+			throw new MessageException("유효하지 않은 정보입니다");
+		}
+	}
+
+	public static String getImageName(int testNum) throws MessageException {
+		try {
+			return TestDAO.getImageName(testNum);
+		} catch (SQLException e) {
+			throw new MessageException("유효하지 않은 정보입니다");
+		}
+	}
+	public static int getAnswer(int testNum) throws MessageException {
+		try {
+			return TestDAO.getAnswer(testNum);
+		} catch (SQLException e) {
+			throw new MessageException("유효하지 않은 정보입니다");
+		}
+	}
+	public static String getAnswerScript(int testNum) throws MessageException {
+		try {
+			return TestDAO.getAnswerScript(testNum);
+		} catch (SQLException e) {
+			throw new MessageException("유효하지 않은 정보입니다");
+		}
+	}
+	
+	public static boolean insertInput(String id, String testIdenty, int inputAnswer) throws MessageException {
+		try {
+			return UserTestDAO.insertInput(id, testIdenty, inputAnswer);
+		} catch (SQLException e) {
+			throw new MessageException("유효하지 않은 정보입니다");
+		}
+	}
+	
 	public static ArrayList<String> getHeadline(int n) {
 		return DataCrawling.getHeadline(n);
 	}

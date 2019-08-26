@@ -28,13 +28,8 @@ CREATE TABLE test (
 	test_script varchar2(200) UNIQUE,
 	test_answer number(1) NOT NULL,
 	answer_script varchar2(1000),
-	image_name varchar2(50) NULL UNIQUE-- fk
-);
-
-CREATE TABLE image (
-	image_name varchar2(50) PRIMARY KEY,
-	test_identy varchar2(30) NOT NULL, -- fk
-	image_root varchar2(50) NOT NULL
+	image_name varchar2(50) NULL UNIQUE,-- fk
+	image_root varchar2(100)
 );
 
 CREATE TABLE users (
@@ -45,8 +40,7 @@ CREATE TABLE users (
 CREATE TABLE usertest (
 	id varchar2(10) PRIMARY KEY,
 	test_identy varchar2(30) NOT NULL, -- fk
-	input_answer number(1) NOT NULL,
-	truefalse varchar2(5) NOT NULL
+	input_answer number(1) NOT NULL
 );
 
 CREATE TABLE outuser (
@@ -54,9 +48,10 @@ CREATE TABLE outuser (
 	pw number(5) NOT NULL
 );
 
-ALTER TABLE test ADD FOREIGN KEY (image_name) REFERENCES image (image_name);
+
 ALTER TABLE test ADD FOREIGN KEY (test_identy) REFERENCES license (test_identy);
 ALTER TABLE image ADD FOREIGN KEY (test_identy) REFERENCES license (test_identy);
 ALTER TABLE usertest ADD FOREIGN KEY (test_identy) REFERENCES license (test_identy);
 ALTER TABLE usertest ADD FOREIGN KEY (id) REFERENCES users (id);
  
+commit;
