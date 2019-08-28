@@ -16,8 +16,5 @@ public class TestDTO {
 	private String testScript;
 	private int answer;
 	private String answerScript;
-	private String imageName;
-	
-	
-	
+	private String imageRoot;
 }

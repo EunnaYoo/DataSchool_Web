@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class UserTestDTO {
+public class TestResultDTO {
+	
 	private String id;
 	private String testIdenty;
 	private int testNum;
-	private int inputAnswer;
+	private String yesno;
 }

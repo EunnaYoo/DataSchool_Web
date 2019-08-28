@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import data.crawling.DataCrawling;
 import data.model.DataService;
 
 @WebServlet("/data")
@@ -17,12 +16,8 @@ public class DataController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		process(request, response);
-	}
-
-	protected void process(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=UTF-8");
 		String command = request.getParameter("command");
 		try {
 			if (command.equals("login")) {
@@ -35,6 +30,8 @@ public class DataController extends HttpServlet {
 				showTest(request, response);
 			} else if (command.equals("exam")) {
 				insertInput(request, response);
+			} else if (command.equals("result")) {
+				showResult(request, response);
 			}
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
@@ -88,10 +85,9 @@ public class DataController extends HttpServlet {
 		int num = Integer.parseInt(request.getParameter("value"));
 		String url = "";
 		try {
-			if(num <= 5) {
+			if (num <= 5) {
 				url = "News/news1.jsp";
-			}
-			else {
+			} else {
 				url = "News/news2.jsp";
 			}
 			request.setAttribute("headline", DataService.getHeadline(num));
@@ -104,35 +100,57 @@ public class DataController extends HttpServlet {
 			s.printStackTrace();
 		}
 	}
-	
+
 	public void showTest(HttpServletRequest request, HttpServletResponse response) {
 		String testCount = request.getParameter("value");
-		String testNum =request.getParameter("value2");
+		String testNum = request.getParameter("value2");
 		int parameter = Integer.parseInt(request.getParameter("value3"));
 		String url = "";
 		try {
 			url = "Test/" + testCount + "SQLD" + testNum + ".jsp";
+			String fileName = DataService.getImageRoot(parameter);
+			request.setAttribute("imageRoot", fileName);
 			request.setAttribute("testContent", DataService.getTestContent(parameter));
 			request.setAttribute("testScript", DataService.getTestScript(parameter));
-//			request.setAttribute("testAnswer", DataService.getAnswer(parameter));
-//			request.setAttribute("answerScript", DataService.getAnswerScript(parameter));
-//			request.setAttribute("imageRoot", DataService.getImageName(parameter));
+			request.setAttribute("testAnswer", DataService.getAnswer(parameter));
+			request.setAttribute("answerScript", DataService.getAnswerScript(parameter));
+			
 			request.getRequestDispatcher(url).forward(request, response);
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();
 		}
 	}
-	
+
 	public void insertInput(HttpServletRequest request, HttpServletResponse response) {
-		String id = request.getParameter("value2");
-		String testIdenty = request.getParameter("value");
-		int inputAnswer = Integer.parseInt(request.getParameter("answer"));
-		System.out.println(id);
-		System.out.println(testIdenty);
-		System.out.println(inputAnswer);
+		String id = request.getParameter("id");
+		String testIdenty = request.getParameter("testIdenty");
+		int testNum = Integer.parseInt(request.getParameter("testNum"));
+		int inputAnswer = Integer.parseInt(request.getParameter("inputAnswer"));
 		try {
-			DataService.insertInput(id, testIdenty, inputAnswer);
+			DataService.insertInput(id, testIdenty, testNum, inputAnswer);
+		} catch (Exception s) {
+			request.setAttribute("errorMsg", s.getMessage());
+			s.printStackTrace();
+		}
+	}
+	
+	public void showResult(HttpServletRequest request, HttpServletResponse response) {
+		String id = request.getParameter("id");
+		String testIdenty = request.getParameter("testIdenty");
+		String url = "";
+		try {
+			url = "Test/result.jsp";
+			for(int i = 1; i<6; i++) {
+				if(DataService.getAnswer(i) == DataService.getInputAnswer(i)) {
+					DataService.insertResult(id, testIdenty, i, "o");
+				}else {
+					DataService.insertResult(id, testIdenty, i, "x");
+				}
+			}
+			request.setAttribute("testNum", DataService.getTestNum());
+			request.setAttribute("yesNo", DataService.getInputYesNo());
+			request.getRequestDispatcher(url).forward(request, response);
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();

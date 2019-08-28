@@ -14,17 +14,18 @@ public class UserTestDAO {
 		return instance;
 	}
 	
-	public static boolean insertInput(String id, String testIdenty, int inputAnswer) throws SQLException {
+	public static boolean insertInput(String id, String testIdenty, int testNum, int inputAnswer) throws SQLException {
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		
 		try {
 			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement("insert into usertest (id, test_identy, input_answer) values(?,?,?)");
+			pstmt = con.prepareStatement("insert into usertest values(?,?,?,?)");
 			pstmt.setString(1, id);
 			pstmt.setString(2, testIdenty);
-			pstmt.setInt(3, inputAnswer);
+			pstmt.setInt(3, testNum);
+			pstmt.setInt(4, inputAnswer);
 			
 			int result = pstmt.executeUpdate();
 			if(result == 1) {
@@ -35,6 +36,27 @@ public class UserTestDAO {
 			DBUtil.close(con, pstmt);
 		}
 		return false;
+	}
+	
+	public static int getInputAnswer(int testNum) throws SQLException {
+
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		int result = 0;
+
+		try {
+			con = DBUtil.getConnection();
+			pstmt = con.prepareStatement("select input_answer from usertest where test_num=?");
+			pstmt.setInt(1, testNum);
+			rset = pstmt.executeQuery();
+			if (rset.next()) {
+				result = rset.getInt(1);
+			}
+		} finally {
+			DBUtil.close(con, pstmt, rset);
+		}
+		return result;
 	}
 	
 }

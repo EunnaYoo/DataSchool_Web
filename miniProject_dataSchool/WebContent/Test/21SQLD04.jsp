@@ -82,12 +82,12 @@ a {
 		</header>
 		<br><br>
 		<h4 class="content_title top">SQLD 21회차 기출문제</h4>
-		<a class="next" href="${pageContext.request.contextPath}/data?command=test&value=21&value2=02&value3=2" >
+		<a class="next" href="${pageContext.request.contextPath}/data?command=test&value=21&value2=05&value3=5" >
 		<button>다음문제</button></a>
 		<fieldset>
 			${requestScope.testContent}<br>
 			${requestScope.testScript}<br>
-			<img src="${requestScope.imageRoot}" style="width: 100%" align="right">
+			<img src="${requestScope.imageRoot}" style="width: 100%%" align="right">
 		</fieldset>
 		<br>
 		<div class="button" align="left">
@@ -130,7 +130,7 @@ a {
 		    	  answer_value = inputAnswer[i].value;
 		      }
 		  }
-		  var data = "command=exam&id=" + id + "&testIdenty=21SQLD&testNum=1&inputAnswer=" + answer_value;
+		  var data = "command=exam&id=" + id + "&testIdenty=21SQLD&testNum=4&inputAnswer=" + answer_value;
 		  xhttp.open("POST", "data", true);
 		  xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		  xhttp.send(data);

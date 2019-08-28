@@ -30,6 +30,7 @@ public class TestDAO {
 			if(rset.next()){
 				result = rset.getString(1);
 			}
+			
 		} finally {
 			DBUtil.close(con, pstmt, rset);
 		}
@@ -59,7 +60,7 @@ public class TestDAO {
 	}
 	
 	// 문제 이미지(imageName) 불러오기
-	public static String getImageName(int testNum) throws SQLException {
+	public static String getImageRoot(int testNum) throws SQLException {
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;

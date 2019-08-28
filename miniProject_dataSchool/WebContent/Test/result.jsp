@@ -82,11 +82,9 @@ a {
 		</header>
 		<br><br>
 		<h4 class="content_title top">SQLD 21회차 기출문제</h4>
-		<a class="next" href="${pageContext.request.contextPath}/data?command=test&value=21&value2=02&value3=2" >
-		<button>다음문제</button></a>
 		<fieldset>
-			${requestScope.testContent}<br>
-			${requestScope.testScript}<br>
+			${requestScope.testNum}<br>
+			${requestScope.yesNo}<br>
 			<img src="${requestScope.imageRoot}" style="width: 100%" align="right">
 		</fieldset>
 		<br>
