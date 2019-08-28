@@ -84,25 +84,37 @@ public class DataService {
 		}
 	}
 	
-	public static boolean insertResult(String id, String testIdenty, int testNum, String yesno) throws MessageException {
+	public static boolean insertResult(String id, String testIdenty, int testNum, String yesno) throws SQLException {
+		return TestResultDAO.insertResult(id, testIdenty, testNum, yesno);
+	}
+	
+	public static ArrayList<String> getAllInputYesNo() throws MessageException {
 		try {
-			return TestResultDAO.insertResult(id, testIdenty, testNum, yesno);
+			return TestResultDAO.getAllInputYesNo();
 		} catch (SQLException e) {
 			throw new MessageException("유효하지 않은 정보입니다");
 		}
 	}
 	
-	public static ArrayList<String> getInputYesNo() throws MessageException {
+	public static ArrayList<Integer> getAllTestNum() throws MessageException {
 		try {
-			return TestResultDAO.getInputYesNo();
+			return TestResultDAO.getAllTestNum();
 		} catch (SQLException e) {
 			throw new MessageException("유효하지 않은 정보입니다");
 		}
 	}
 	
-	public static ArrayList<String> getTestNum() throws MessageException {
+	public static ArrayList<Integer> getAllInputAnswer() throws MessageException{
 		try {
-			return TestResultDAO.getTestNum();
+			return UserTestDAO.getAllInputAnswer();
+		} catch (SQLException e) {
+			throw new MessageException("유효하지 않은 정보입니다");
+		}
+	}
+	
+	public static ArrayList<Integer> getAllAnswer() throws MessageException{
+		try {
+			return TestDAO.getAllAnswer();
 		} catch (SQLException e) {
 			throw new MessageException("유효하지 않은 정보입니다");
 		}

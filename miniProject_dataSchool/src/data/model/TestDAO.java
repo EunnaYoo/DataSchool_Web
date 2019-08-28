@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import data.model.util.DBUtil;
 
@@ -118,6 +119,26 @@ public class TestDAO {
 			rset = pstmt.executeQuery();
 			if(rset.next()){
 				result = rset.getString(1);
+			}
+		} finally {
+			DBUtil.close(con, pstmt, rset);
+		}
+		return result;
+	}
+	
+	public static ArrayList<Integer> getAllAnswer() throws SQLException {
+
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		ArrayList<Integer> result = new ArrayList<>();
+
+		try {
+			con = DBUtil.getConnection();
+			pstmt = con.prepareStatement("select test_answer from test");
+			rset = pstmt.executeQuery();
+			while (rset.next()) {
+				result.add(rset.getInt(1));
 			}
 		} finally {
 			DBUtil.close(con, pstmt, rset);

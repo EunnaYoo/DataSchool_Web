@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import data.model.dto.UserTestDTO;
 import data.model.util.DBUtil;
@@ -58,5 +59,26 @@ public class UserTestDAO {
 		}
 		return result;
 	}
+	
+	public static ArrayList<Integer> getAllInputAnswer() throws SQLException {
+
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		ArrayList<Integer> result = new ArrayList<>();
+
+		try {
+			con = DBUtil.getConnection();
+			pstmt = con.prepareStatement("select input_answer from usertest");
+			rset = pstmt.executeQuery();
+			while (rset.next()) {
+				result.add(rset.getInt(1));
+			}
+		} finally {
+			DBUtil.close(con, pstmt, rset);
+		}
+		return result;
+	}
+	
 	
 }

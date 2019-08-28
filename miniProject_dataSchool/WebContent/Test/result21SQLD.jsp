@@ -1,6 +1,7 @@
 <%@page import="data.model.DataService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <title>DataSchooool</title>
@@ -83,23 +84,22 @@ a {
 		<br><br>
 		<h4 class="content_title top">SQLD 21회차 기출문제</h4><br>
 		${sessionScope.id}님의 21회차 결과입니다.
-		<fieldset>
-		<table>
+		<table border="1">
 			<tr>
 				<th>문제 번호</th>
 				<th>선택 답안</th>
 				<th>답안</th>
-				<th>선택 답안</th>
-				<th>정오답</th>
+				<th>정답여부</th>
 			</tr>
-			<tr>
-				<td>${requestScope.testNum}</td>
-				<td>${requestScope.testNum}</td>
-			</tr>
-			<br>
-			${requestScope.yesNo}<br>
+			<c:forEach begin="0" end="${requestScope.allTestNum.size()-1}" var="myVar">
+				<tr>
+					<td>${requestScope.allTestNum.get(myVar)}</td>
+					<td>${requestScope.allInputAnswer.get(myVar)}</td>
+					<td>${requestScope.allAnswer.get(myVar)}</td>
+					<td>${requestScope.allYesNo.get(myVar)}</td>
+				</tr>
+			</c:forEach>
 		</table>
-		</fieldset>
 		<br>
 	</div>
 	<script>

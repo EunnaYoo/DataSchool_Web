@@ -33,7 +33,7 @@ public class DataController extends HttpServlet {
 			} else if (command.equals("resultShow")) {
 				showResult(request, response);
 			} else if (command.equals("resultSave")) {
-				//saveResult(request, response);
+				saveResult(request, response);
 			}
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
@@ -141,9 +141,10 @@ public class DataController extends HttpServlet {
 	public void showResult(HttpServletRequest request, HttpServletResponse response) {
 		String url = "Test/result21SQLD.jsp";
 		try {
-			request.setAttribute("testNum", DataService.getTestNum());
-			//request.setAttribute("inputAnswer", DataService.);
-			request.setAttribute("yesNo", DataService.getInputYesNo());
+			request.setAttribute("allTestNum", DataService.getAllTestNum());
+			request.setAttribute("allInputAnswer", DataService.getAllInputAnswer());
+			request.setAttribute("allAnswer", DataService.getAllAnswer());
+			request.setAttribute("allYesNo", DataService.getAllInputYesNo());
 			request.getRequestDispatcher(url).forward(request, response);
 		} catch (Exception s) {
 			s.printStackTrace();
@@ -153,7 +154,6 @@ public class DataController extends HttpServlet {
 	public void saveResult (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
 		String testIdenty = request.getParameter("testIdenty");
-		String url = "errorSave.jsp";
 		try {
 			for(int i = 1; i<6; i++) {
 				if(DataService.getAnswer(i) == DataService.getInputAnswer(i)) {
@@ -164,8 +164,7 @@ public class DataController extends HttpServlet {
 			}
 		} catch (Exception s) {
 			s.printStackTrace();
-			request.setAttribute("errorSave", s.getMessage());
-			request.getRequestDispatcher(url).forward(request, response);
+			request.setAttribute("errorSave", "이미 저장되었습니다");
 		}
 	}
 }

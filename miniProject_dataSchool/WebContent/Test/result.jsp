@@ -82,16 +82,11 @@ a {
 		</header>
 		<br><br>
 		<h4 class="content_title top">SQLD 21회차 기출문제</h4>
-		<button onclick= "save()"> 결과저장 </button>
-		<form action="data">
-		  <button type="submit" name="command" value="resultShow">결과보기</button>
-		  </form>
 		<fieldset>
-			${requestScope.testContent}<br>
-			${requestScope.testScript}<br>
-			<img src="${requestScope.imageRoot}" style="width: 100%%" align="right">
+			${requestScope.testNum}<br>
+			${requestScope.yesNo}<br>
+			<img src="${requestScope.imageRoot}" style="width: 100%" align="right">
 		</fieldset>
-		
 		<br>
 		<div class="button" align="left">
 		<%-- <form action="${pageContext.request.contextPath}/data"> --%>
@@ -118,7 +113,9 @@ a {
 		function serve() {
 		  var xhttp = new XMLHttpRequest();
 		  xhttp.onreadystatechange = function() {
+			  console.log("hi");
 		    if (this.readyState == 4 && this.status == 200) {
+		    	console.log("bye");
 		    alert("입력이 완료되었습니다");
 		    }
 		  };
@@ -131,26 +128,11 @@ a {
 		    	  answer_value = inputAnswer[i].value;
 		      }
 		  }
-		  var data = "command=exam&id=" + id + "&testIdenty=21SQLD&testNum=5&inputAnswer=" + answer_value;
+		  var data = "command=exam&id=" + id + "&testIdenty=21SQLD&testNum=1&inputAnswer=" + answer_value;
 		  xhttp.open("POST", "data", true);
 		  xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		  xhttp.send(data);
 		}
-		
-		function save() {
-			  var xhttp = new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-			    if (this.readyState == 4 && this.status == 200) {
-			    alert("저장이 완료되었습니다");
-			    }
-			  };
-			  
-			  var id = ${sessionScope.id};
-			  var data = "command=resultSave&id=" + id + "&testIdenty=21SQLD";
-			  xhttp.open("POST", "data", true);
-			  xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-			  xhttp.send(data);
-			}
 		
 		function introduce() {
 			var x = document.getElementById("introDetail");

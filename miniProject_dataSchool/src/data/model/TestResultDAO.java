@@ -38,7 +38,7 @@ public class TestResultDAO {
 		return false;
 	}
 	
-	public static ArrayList<String> getInputYesNo() throws SQLException {
+	public static ArrayList<String> getAllInputYesNo() throws SQLException {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -57,19 +57,19 @@ public class TestResultDAO {
 		}
 		return result;
 	}
-	public static ArrayList<String> getTestNum() throws SQLException {
+	public static ArrayList<Integer> getAllTestNum() throws SQLException {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		ArrayList<String> result = new ArrayList<>();
+		ArrayList<Integer> result = new ArrayList<>();
 		
 		try {
 			con = DBUtil.getConnection();
 			pstmt = con.prepareStatement("select test_num from testresult");
 			rset = pstmt.executeQuery();
 			while (rset.next()) {
-				result.add(rset.getString(1));
+				result.add(rset.getInt(1));
 			}
 		} finally {
 			DBUtil.close(con, pstmt, rset);
