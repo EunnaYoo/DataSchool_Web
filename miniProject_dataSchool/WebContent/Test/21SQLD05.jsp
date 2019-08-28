@@ -82,13 +82,18 @@ a {
 		</header>
 		<br><br>
 		<h4 class="content_title top">SQLD 21회차 기출문제</h4>
-		<a class="next" href="${pageContext.request.contextPath}/data?command=result&id=${sessionScope.id}&testIdenty=21SQLD" >
-		<button>다음문제</button></a>
+		<a class = "next" href = "${pageContext.request.contextPath}/data?command=resultSave&id=${sessionScope.id}&testIdenty=21SQLD">
+		<button> 결과저장 </button></a>
+		
+		<a class = "next" href = "${pageContext.request.contextPath}/data?command=resultShow">
+		  <button>결과보기</button></a>
+		  
 		<fieldset>
 			${requestScope.testContent}<br>
 			${requestScope.testScript}<br>
 			<img src="${requestScope.imageRoot}" style="width: 100%%" align="right">
 		</fieldset>
+		
 		<br>
 		<div class="button" align="left">
 		<%-- <form action="${pageContext.request.contextPath}/data"> --%>

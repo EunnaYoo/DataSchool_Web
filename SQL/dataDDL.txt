@@ -10,6 +10,14 @@ DROP TABLE testresult cascade constraint;
 
 DROP TABLE outuser cascade constraint;
 
+DROP SEQUENCE seq_num1;
+
+DROP SEQUENCE seq_num2;
+
+CREATE SEQUENCE seq_num1;
+
+CREATE SEQUENCE seq_num2;
+
 
 CREATE TABLE license (
 	test_identy varchar2(30) PRIMARY KEY,
@@ -18,6 +26,7 @@ CREATE TABLE license (
 );
 
 CREATE TABLE test (
+	num number(5) PRIMARY KEY,
 	test_identy varchar2(30) NOT NULL,
 	test_num number(2) NOT NULL,
 	test_content varchar2(200) NOT NULL UNIQUE,
@@ -33,12 +42,12 @@ CREATE TABLE users (
 );
 
 CREATE TABLE usertest (
+	num number(5) PRIMARY KEY, -- sequence
 	id varchar2(10) NOT NULL, -- fk(user id)
 	test_identy varchar2(30) NOT NULL, -- fk(license test_identy)
 	test_num number(2) NOT NULL,
 	input_answer number(1) NOT NULL
 );
-
 
 CREATE TABLE testresult (
 	id varchar2(10) NOT NULL, -- fk(user id)
@@ -53,10 +62,8 @@ CREATE TABLE outuser (
 );
 
 ALTER TABLE test ADD FOREIGN KEY (test_identy) REFERENCES license (test_identy);
-ALTER table usertest ADD constraint prevent_pk primary key (id,test_identy,test_num);
 ALTER TABLE usertest ADD FOREIGN KEY (test_identy) REFERENCES license (test_identy);
 ALTER TABLE usertest ADD FOREIGN KEY (id) REFERENCES users (id);
-ALTER TABLE testresult ADD CONSTRAINT result_pk PRIMARY KEY (id,test_identy,test_num);
 ALTER TABLE testresult ADD FOREIGN KEY (test_identy) REFERENCES license (test_identy);
 ALTER TABLE testresult ADD FOREIGN KEY (id) REFERENCES users (id);
 

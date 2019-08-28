@@ -81,32 +81,26 @@ a {
 			</p>
 		</header>
 		<br><br>
-		<h4 class="content_title top">SQLD 21회차 기출문제</h4>
+		<h4 class="content_title top">SQLD 21회차 기출문제</h4><br>
+		${sessionScope.id}님의 21회차 결과입니다.
 		<fieldset>
-			${requestScope.testNum}<br>
+		<table>
+			<tr>
+				<th>문제 번호</th>
+				<th>선택 답안</th>
+				<th>답안</th>
+				<th>선택 답안</th>
+				<th>정오답</th>
+			</tr>
+			<tr>
+				<td>${requestScope.testNum}</td>
+				<td>${requestScope.testNum}</td>
+			</tr>
+			<br>
 			${requestScope.yesNo}<br>
-			<img src="${requestScope.imageRoot}" style="width: 100%" align="right">
+		</table>
 		</fieldset>
 		<br>
-		<div class="button" align="left">
-		<%-- <form action="${pageContext.request.contextPath}/data"> --%>
-		     <input type = "radio" name = "answer" value = "1">1) 어떤 부하 직원보다도 연봉이 높은 상사<br>
-		     <input type = "radio" name = "answer" value = "2">2) 어떤 부하 직원보다도 연봉이 낮은 상사<br>
-		     <input type = "radio" name = "answer" value = "3">3) 어떤 상사 보다도 연봉이 높은 부하 직원<br>
-		     <input type = "radio" name = "answer" value = "4">4) 어떤 상사 보다도 연봉이 낮은 부하 직원<br>
-		     <input type = "hidden" name = "command" value = "exam">
-		     <button onclick="serve()">정답 제출</button>
- 		  </div>
- 		  
- 		  <div style="font:'Malgun Gothic'">
-    <a onclick="showAnswer()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      정답보기 <i class="fa fa-caret-down"></i>
-    </a>
-    <div id="showAnswer" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-    정답 : ${requestScope.testAnswer}<br>
-    해설 : ${requestScope.answerScript}
-    </div>
-  </div>
 	</div>
 	<script>
 		// Accordion 

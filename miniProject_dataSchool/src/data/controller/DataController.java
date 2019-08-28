@@ -30,8 +30,10 @@ public class DataController extends HttpServlet {
 				showTest(request, response);
 			} else if (command.equals("exam")) {
 				insertInput(request, response);
-			} else if (command.equals("result")) {
+			} else if (command.equals("resultShow")) {
 				showResult(request, response);
+			} else if (command.equals("resultSave")) {
+				//saveResult(request, response);
 			}
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
@@ -62,8 +64,7 @@ public class DataController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void identifyJoin(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	public void identifyJoin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "showError.jsp";
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
@@ -136,24 +137,33 @@ public class DataController extends HttpServlet {
 	}
 	
 	public void showResult(HttpServletRequest request, HttpServletResponse response) {
-		String id = request.getParameter("id");
-		String testIdenty = request.getParameter("testIdenty");
-		String url = "";
+		String url = "Test/result21SQLD.jsp";
 		try {
-			url = "Test/result.jsp";
-			for(int i = 1; i<6; i++) {
-				if(DataService.getAnswer(i) == DataService.getInputAnswer(i)) {
-					DataService.insertResult(id, testIdenty, i, "o");
-				}else {
-					DataService.insertResult(id, testIdenty, i, "x");
-				}
-			}
 			request.setAttribute("testNum", DataService.getTestNum());
+			request.setAttribute("inputAnswer", DataService.);
 			request.setAttribute("yesNo", DataService.getInputYesNo());
 			request.getRequestDispatcher(url).forward(request, response);
 		} catch (Exception s) {
-			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();
+		}
+	}
+	
+	public void saveResult (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("id");
+		String testIdenty = request.getParameter("testIdenty");
+		String url = "errorSave.jsp";
+		try {
+			for(int i = 1; i<6; i++) {
+				if(DataService.getAnswer(i) == DataService.getInputAnswer(i)) {
+					DataService.insertResult(id, testIdenty, i, "O");
+				} else {
+					DataService.insertResult(id, testIdenty, i, "X");
+				}
+			}
+		} catch (Exception s) {
+			s.printStackTrace();
+			request.setAttribute("errorSave", s.getMessage());
+			request.getRequestDispatcher(url).forward(request, response);
 		}
 	}
 }

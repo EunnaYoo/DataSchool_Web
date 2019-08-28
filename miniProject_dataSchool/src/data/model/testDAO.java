@@ -5,10 +5,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import data.model.dto.UserDTO;
 import data.model.util.DBUtil;
 
 public class TestDAO {
+	
 	private static TestDAO instance = new TestDAO();
 	public static TestDAO getInstance() {
 		return instance;
@@ -124,4 +124,5 @@ public class TestDAO {
 		}
 		return result;
 	}
+
 }
