@@ -56,7 +56,7 @@ public class DataController extends HttpServlet {
 			} else if (!DataService.identify(id, pw)) {
 				session.invalidate();
 				request.setAttribute("check", "로그인에 실패했습니다");
-				url = "login.jsp";
+				url = "index.jsp";
 			}
 		} catch (Exception s) {
 			request.setAttribute("errorMsg", s.getMessage());
@@ -65,12 +65,13 @@ public class DataController extends HttpServlet {
 	}
 
 	public void identifyJoin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String url = "showError.jsp";
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		try {
 			if (DataService.identifyJoin(id, pw)) {
-				url = "login.jsp";
+				url = "index.jsp";
 			} else if (!DataService.identifyJoin(id, pw)) {
 				request.setAttribute("check", "가입에 실패했습니다");
 				url = "Join.jsp";
@@ -79,6 +80,7 @@ public class DataController extends HttpServlet {
 			request.setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();
 		}
+		
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
@@ -140,7 +142,7 @@ public class DataController extends HttpServlet {
 		String url = "Test/result21SQLD.jsp";
 		try {
 			request.setAttribute("testNum", DataService.getTestNum());
-			request.setAttribute("inputAnswer", DataService.);
+			//request.setAttribute("inputAnswer", DataService.);
 			request.setAttribute("yesNo", DataService.getInputYesNo());
 			request.getRequestDispatcher(url).forward(request, response);
 		} catch (Exception s) {
