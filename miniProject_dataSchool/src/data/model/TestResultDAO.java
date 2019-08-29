@@ -38,7 +38,7 @@ public class TestResultDAO {
 		return false;
 	}
 	
-	public static ArrayList<String> getAllInputYesNo() throws SQLException {
+	public static ArrayList<String> getAllInputYesNo(String id) throws SQLException {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -47,7 +47,8 @@ public class TestResultDAO {
 		
 		try {
 			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement("select yesno from testresult");
+			pstmt = con.prepareStatement("select yesno from testresult where ID=?");
+			pstmt.setString(1, id);
 			rset = pstmt.executeQuery();
 			while (rset.next()) {
 				result.add(rset.getString(1));

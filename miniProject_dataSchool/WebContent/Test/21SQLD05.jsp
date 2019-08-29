@@ -83,6 +83,7 @@ a {
 		<br><br>
 		<h4 class="content_title top">SQLD 21회차 기출문제</h4>
 		<form action="data">
+			<input hidden="hidden" name = "name" value="${sessionScope.id}">
 		  <button type="submit" name="command" value="resultShow" style="float: right;">결과보기</button><br><br>
 		  </form>
 		<fieldset>

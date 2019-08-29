@@ -60,7 +60,7 @@ public class UserTestDAO {
 		return result;
 	}
 	
-	public static ArrayList<Integer> getAllInputAnswer() throws SQLException {
+	public static ArrayList<Integer> getAllInputAnswer(String id) throws SQLException {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -69,7 +69,8 @@ public class UserTestDAO {
 
 		try {
 			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement("select input_answer from usertest");
+			pstmt = con.prepareStatement("select input_answer from usertest where ID=?");
+			pstmt.setString(1, id);
 			rset = pstmt.executeQuery();
 			while (rset.next()) {
 				result.add(rset.getInt(1));

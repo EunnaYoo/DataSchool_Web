@@ -84,9 +84,9 @@ public class DataService {
 		return TestResultDAO.insertResult(id, testIdenty, testNum, yesno);
 	}
 	
-	public static ArrayList<String> getAllInputYesNo() throws MessageException {
+	public static ArrayList<String> getAllInputYesNo(String id) throws MessageException {
 		try {
-			return TestResultDAO.getAllInputYesNo();
+			return TestResultDAO.getAllInputYesNo(id);
 		} catch (SQLException e) {
 			throw new MessageException("유효하지 않은 정보입니다");
 		}
@@ -100,9 +100,9 @@ public class DataService {
 		}
 	}
 	
-	public static ArrayList<Integer> getAllInputAnswer() throws MessageException{
+	public static ArrayList<Integer> getAllInputAnswer(String id) throws MessageException{
 		try {
-			return UserTestDAO.getAllInputAnswer();
+			return UserTestDAO.getAllInputAnswer(id);
 		} catch (SQLException e) {
 			throw new MessageException("유효하지 않은 정보입니다");
 		}

@@ -102,7 +102,7 @@ a {
 				<th>답안</th>
 				<th>정답여부</th>
 			</tr>
-			<c:forEach begin="0" end="${requestScope.allTestNum.size()-1}" var="myVar">
+			<c:forEach begin="0" end="4" var="myVar">
 				<tr>
 					<td>${requestScope.allTestNum.get(myVar)}</td>
 					<td>${requestScope.allInputAnswer.get(myVar)}</td>
