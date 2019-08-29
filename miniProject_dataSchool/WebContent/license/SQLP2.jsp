@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -86,8 +90,9 @@ a {
 		<p class="indent">SQL 전문가 자격시험의 과목은 총 3과목으로 구성되어 있으며 데이터 모델링의 이해
 			과목을 바탕으로 SQL 기본 및 활용, SQL 고급활용 및 튜닝을 수행하는 능력을 검정합니다.</p>
 			
-		<fieldset>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="과목 및 내용">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="30%" />
 					<col width="30%" />
@@ -361,7 +366,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 	</div>
 	<script>
 		// Accordion 

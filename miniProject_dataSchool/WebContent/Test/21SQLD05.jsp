@@ -56,7 +56,7 @@ a {
 
 	<!-- Top menu on small screens -->
 	<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-		<div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+		<div class="w3-bar-item w3-padding-24 w3-wide">dataSchool</div>
 		<a href="javascript:void(0)"
 			class="w3-bar-item w3-button w3-padding-24 w3-right"
 			onclick="w3_open()"><i class="fa fa-bars"></i></a>
@@ -82,9 +82,8 @@ a {
 		</header>
 		<br><br>
 		<h4 class="content_title top">SQLD 21회차 기출문제</h4>
-		<button onclick= "save()"> 결과저장 </button>
 		<form action="data">
-		  <button type="submit" name="command" value="resultShow">결과보기</button>
+		  <button type="submit" name="command" value="resultShow" style="float: right;">결과보기</button><br><br>
 		  </form>
 		<fieldset>
 			${requestScope.testContent}<br>
@@ -95,12 +94,15 @@ a {
 		<br>
 		<div class="button" align="left">
 		<%-- <form action="${pageContext.request.contextPath}/data"> --%>
-		     <input type = "radio" name = "answer" value = "1">1) 어떤 부하 직원보다도 연봉이 높은 상사<br>
-		     <input type = "radio" name = "answer" value = "2">2) 어떤 부하 직원보다도 연봉이 낮은 상사<br>
-		     <input type = "radio" name = "answer" value = "3">3) 어떤 상사 보다도 연봉이 높은 부하 직원<br>
-		     <input type = "radio" name = "answer" value = "4">4) 어떤 상사 보다도 연봉이 낮은 부하 직원<br>
+		     <input type = "radio" name = "answer" value = "1">1) 개념적 데이터 모델링 <br>
+		     <input type = "radio" name = "answer" value = "2">2) 논리적 데이터 모델링 <br>
+		     <input type = "radio" name = "answer" value = "3">3) 물리적 데이터 모델링 <br>
+		     <input type = "radio" name = "answer" value = "4">4) 추상적 데이터 모델링<br>
 		     <input type = "hidden" name = "command" value = "exam">
+		     <input type = "hidden" name = "command" value = "exam">
+		     <br>
 		     <button onclick="serve()">정답 제출</button>
+			 <button onclick= "save()"> 결과저장 </button>
  		  </div>
  		  
  		  <div style="font:'Malgun Gothic'">
@@ -145,7 +147,7 @@ a {
 			    }
 			  };
 			  
-			  var id = ${sessionScope.id};
+			  var id = "${sessionScope.id}";
 			  var data = "command=resultSave&id=" + id + "&testIdenty=21SQLD";
 			  xhttp.open("POST", "data", true);
 			  xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

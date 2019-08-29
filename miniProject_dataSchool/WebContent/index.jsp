@@ -8,7 +8,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="FormFolder/fonts/icomoon/style.css">
     <link rel="stylesheet" href="FormFolder/css/bootstrap.min.css">
@@ -46,13 +45,12 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-   
     
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
       
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <div class="site-logo mr-auto w-25"><a href="index.html">DataSchool</a></div>
+          <div class="site-logo mr-auto w-25"><a href="index.jsp">DataSchool</a></div>
 
           <div class="mx-auto text-center">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -84,8 +82,8 @@
             <div class="col-12">
               <div class="row align-items-center">
                 <div class="col-lg-6 mb-4"> 
-                  <h1  data-aos="fade-up" data-aos-delay="100">Learn From The Expert</h1>
-                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
+                  <h1  data-aos="fade-up" data-aos-delay="100">If you want to study a data license,<br>Right Here !!</h1>
+                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Let's get all the license through various services.<br>Join us now ! </p>
                   <p data-aos="fade-up" data-aos-delay="300"><a href="Join.jsp" class="btn btn-primary py-3 px-5 btn-pill">Sign Up</a></p>
 
                 </div>
@@ -116,7 +114,7 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-lg-7 text-center"  data-aos="fade-up" data-aos-delay="">
             <h2 class="section-title">Our Programs</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p>
+            <p>This website was created to help people<br> who wanted to get a job in the data field.</p>
           </div>
         </div>
         <div class="row mb-5 align-items-center">
@@ -134,44 +132,43 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
             <h2 class="section-title">Our Contact</h2>
-            <p class="mb-5">Go to we are GitHub !</p>
+            <p class="mb-5">Come to we are GitHub !</p>
           </div>
         </div>
 
-        <div class="row" >
+        <div class="row">
         
           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="teacher text-center" >
-              <img src="FormFolder/images/person_2.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+            <div class="teacher text-center">
+              <img src="FormFolder/images/jonsung.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4" >
               <div class="py-2">
                 <h3 class="text-black">Jongsung Kim</h3>
                 <p class="position">Pull Stack Developer</p>
-                <a href = "https://github.com/SEJSCloud">GitHub Go</a>
+                <a href = "https://github.com/SEJSCloud">GitHub Go (Click to Text)</a>
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="teacher text-center">
-              <img src="FormFolder/images/person_3.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <img src="FormFolder/images/cat22.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
               <div class="py-2">
                 <h3 class="text-black">Eunna Yoo</h3>
                 <p class="position">Pull Stack Developer</p>
-                <a href = "https://github.com/EunnaYoo">GitHub Go</a>
+                <a href = "https://github.com/EunnaYoo">GitHub Go (Click to Text)</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
      
     <footer class="footer-section bg-white">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <h3>About DataSchool</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consectetur ut hic ipsum et veritatis corrupti. Itaque eius soluta optio dolorum temporibus in, atque, quos fugit sunt sit quaerat dicta.</p>
+            <p>We support your education through various services such as introducing your license, problem pool, and moving to the relevant web site.</p>
           </div>
 
           <div class="col-md-3 ml-auto">
@@ -184,11 +181,12 @@
 
           <div class="col-md-4">
             <h3>Subscribe</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt incidunt iure iusto architecto? Numquam, natus?</p>
+            <p>Coming Soon</p>
             <form action="#" class="footer-subscribe">
               <div class="d-flex mb-5">
-                <input type="text" class="form-control rounded-0" placeholder="Email">
+                <!-- <input type="text" class="form-control rounded-0" placeholder="Email"> 
                 <input type="submit" class="btn btn-primary rounded-0" value="Subscribe">
+                 -->
               </div>
             </form>
           </div>

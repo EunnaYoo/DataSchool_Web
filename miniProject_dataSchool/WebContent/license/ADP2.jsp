@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+
+.list{
+	text-align : left;
+}
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -73,20 +77,20 @@ a {
 		</header>
 		<div class="contents" align="left">
 			<table valign="bottom">
+			<tr>
 				<td><a href="ADP.jsp" class="tab">자격소개</a></td>
 				<td><a href="ADP2.jsp" class="tab">시험주요내용</a></td>
 				<td><a href="ADP3.jsp" class="tab">출제문항및배점</a></td>
 				<td><a href="ADP4.jsp" class="tab">응시자합격기준</a></td>
+			</tr>
 			</table>
 		</div>
-		<h4 class="content_title top">ADP</h4>
-		<h4 class="content_title top">과목 및 내용</h4>
+		<h4 class="content_title top"><b>국가 공인 자격 ADP</b></h4>
 		<p class="indent">데이터 분석 전문가 자격검정 시험의 과목은 총 5과목으로 구성되어 있으며 데이터 이해
 			과목을 바탕으로 데이터 분석 기획, 데이터 분석, 데이터 시각화를 수행하는 능력을 검정합니다.</p>
-
-		<fieldset>
-			<legend>과목 및 내용</legend>
-			<table class="data top" cellpadding="0" cellspacing="0" border="1">
+			
+		<table class="data top" summary="과목 및 내용" cellspacing="0" cellpadding="0" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="30%" />
 					<col width="30%" />
@@ -374,7 +378,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 	</div>
 	<script>
 		// Accordion 

@@ -77,7 +77,7 @@ a {
 			<br><br>
 			<table style="margin-left: auto; margin-right: auto;" border = "2" WIDTH = "100%">
 				<tr>
-					<td><a href ="ADsP19.jsp">19회차</a></td>
+					<td><a href ="#">19회차 (준비중)</a></td>
 				</tr>
 			</table>
 		</h4>

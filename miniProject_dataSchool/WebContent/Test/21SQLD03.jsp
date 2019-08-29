@@ -56,7 +56,7 @@ a {
 
 	<!-- Top menu on small screens -->
 	<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-		<div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+		<div class="w3-bar-item w3-padding-24 w3-wide">DataSchool</div>
 		<a href="javascript:void(0)"
 			class="w3-bar-item w3-button w3-padding-24 w3-right"
 			onclick="w3_open()"><i class="fa fa-bars"></i></a>
@@ -92,11 +92,82 @@ a {
 		<br>
 		<div class="button" align="left">
 		<%-- <form action="${pageContext.request.contextPath}/data"> --%>
-		     <input type = "radio" name = "answer" value = "1">1) 어떤 부하 직원보다도 연봉이 높은 상사<br>
-		     <input type = "radio" name = "answer" value = "2">2) 어떤 부하 직원보다도 연봉이 낮은 상사<br>
-		     <input type = "radio" name = "answer" value = "3">3) 어떤 상사 보다도 연봉이 높은 부하 직원<br>
-		     <input type = "radio" name = "answer" value = "4">4) 어떤 상사 보다도 연봉이 낮은 부하 직원<br>
+		      <input type = "radio" name = "answer" value = "1">
+		     	1)<br>
+		     	SELECT * FROM SQLD_21_01<br>
+		     	WHERE V1 IN (SELECT V1 FROM SQLD_21_02);<br>
+		     	<table border = "1" cellpadding="0" cellspacing="0">
+		     		<tr>
+		     			<th>N1</th>
+		     			<th>V1</th>
+		     		</tr>
+		     		<tr>
+		     			<td>1</td>
+		     			<td>A</td>
+		     		</tr>
+		     		<tr>
+		     			<td>3</td>
+		     			<td>B</td>
+		     		</tr>
+		     	</table>
+		     	<br>
+		     <input type = "radio" name = "answer" value = "2">
+		     	2)<br>
+		     	SELECT * FROM SQLD_21_01<br>
+		        WHERE V1 NOT IN (SELECT V1 FROM SQLD_21_02);<br>
+		        <table border = "1" cellpadding="0" cellspacing="0">
+		     		<tr>
+		     			<th>N1</th>
+		     			<th>V1</th>
+		     		</tr>
+		     		<tr>
+		     			<td>4</td>
+		     			<td>C</td>
+		     		</tr>
+		     	</table>
+		     	<br>
+		     <input type = "radio" name = "answer" value = "3">
+		     3)<br> 
+		     SELECT * FROM SQLD_21_01 A<br>
+		     WHERE EXISTS (SELECT 'X' FROM SQLD_21_02 B<br>
+		     	   		  WHERE A.V1 = B.V1);<br>
+		     	<table border = "1" cellpadding="0" cellspacing="0">
+		     		<tr>
+		     			<th>N1</th>
+		     			<th>V1</th>
+		     		</tr>
+		     		<tr>
+		     			<td>1</td>
+		     			<td>A</td>
+		     		</tr>
+		     		<tr>
+		     			<td>3</td>
+		     			<td>B</td>
+		     		</tr>
+		     	</table>
+		     	<br>
+		     <input type = "radio" name = "answer" value = "4">
+		     4) <br>
+		     	SELECT * FROM SQLD_21_01 A<br>
+		     	WHERE NOT EXISTS (SELECT 'X' FROM SQLD_21_02 B<br>
+		     	   				 WHERE A.V1 = B.V1);<br>
+		     	<table border = "1" cellpadding="0" cellspacing="0">
+		     		<tr>
+		     			<th>N1</th>
+		     			<th>V1</th>
+		     		</tr>
+		     		<tr>
+		     			<td>2</td>
+		     			<td> </td>
+		     		</tr>
+		     		<tr>
+		     			<td>4</td>
+		     			<td>C</td>
+		     		</tr>
+		     	</table>
+		     	<br>
 		     <input type = "hidden" name = "command" value = "exam">
+		     <br>
 		     <button onclick="serve()">정답 제출</button>
  		  </div>
  		  

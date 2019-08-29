@@ -57,7 +57,7 @@ a {
 
 	<!-- Top menu on small screens -->
 	<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-		<div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+		<div class="w3-bar-item w3-padding-24 w3-wide">DataSchool</div>
 		<a href="javascript:void(0)"
 			class="w3-bar-item w3-button w3-padding-24 w3-right"
 			onclick="w3_open()"><i class="fa fa-bars"></i></a>
@@ -82,9 +82,20 @@ a {
 			</p>
 		</header>
 		<br><br>
-		<h4 class="content_title top">SQLD 21회차 기출문제</h4><br>
-		${sessionScope.id}님의 21회차 결과입니다.
-		<table border="1">
+		<h4 class="content_title top">SQLD 21회차 기출문제</h4>
+		
+		<p class = "indent">
+		${sessionScope.id}님의 21회차 결과입니다.</p>
+		
+		
+		<table class="data top" cellpadding="0" cellspacing="0" border="1"
+			style="margin-left: 10px; text-align: center;">
+			<colgroup>
+				<col width="20%">
+				<col width="30%">
+				<col width="10%">
+				<col width="10%">
+			</colgroup>
 			<tr>
 				<th>문제 번호</th>
 				<th>선택 답안</th>

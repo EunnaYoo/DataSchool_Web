@@ -35,6 +35,10 @@ a {
   padding: 5px 10px;
   background-color: #888;
  }
+ 
+ .list{
+	text-align : left;
+}
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -70,31 +74,35 @@ a {
 		</header>
 		<div class="contents" align="left">
 			<table valign="bottom">
+			<tr>
 				<td><a href="ADP.jsp" class="tab">자격소개</a></td>
 				<td><a href="ADP2.jsp" class="tab">시험주요내용</a></td>
 				<td><a href="ADP3.jsp" class="tab">출제문항및배점</a></td>
 				<td><a href="ADP4.jsp" class="tab">응시자합격기준</a></td>
+			</tr>
 			</table>
 		</div>
-		<h4 class="content_title top">ADP</h4>
-  <h4 class="content_title top">출제 문항수 </h4>
-
+		<h4 class="content_title top"><b>국가 공인 자격 ADP</b></h4>
+			<h4 class="content_title top">☞ 출제문항수</h4>
   <p class="indent">
-  데이터 분석 전문가 자격시험은 필기시험과 실기시험으로 구성되어 있으며 필기시험 합격기준 및 응시자격 요건을 충족하면 실기시험에 응시할 수 있습니다. 실기시험은 CBT(Computer Based Test) 방식의 시험으로 자격을 검정하며, 실기시험의 합격자는 최종합격자로 분류되어 데이터 분석 전문가 자격이 부여됩니다.
-  </p><br><Br>
+  데이터 분석 전문가 자격시험은 필기시험과 실기시험으로 구성되어 있으며 필기시험 합격기준 및 응시자격 요건을 충족하면 실기시험에 응시할 수 있습니다.<br>
+  실기시험은 CBT(Computer Based Test) 방식의 시험으로 자격을 검정하며,<br>
+  실기시험의 합격자는 최종합격자로 분류되어 데이터 분석 전문가 자격이 부여됩니다.
+  </p>
   
-  <h5 class="sub_title">데이터 분석 전문가 필기시험(총 문항수 : 81문항 - 객관식 80문항, 서술형 1문항)</h5>	
+  <h5 class="sub_title">데이터 분석 전문가 필기시험<br>(총 문항수 : 81문항 - 객관식 80문항, 서술형 1문항)</h5>	
 
-   
-  <fieldset>
-  <legend>- 데이터 분석전문가 필기시험</legend>
-  <table class="data top" cellpadding="0" cellspacing="0" summary="출제문항 및 배점"  border="1">
+  <table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 	 <colgroup>
-	 <col width="80" />
-	 <col width="140" />
-	 <col width="90" />
-	 <col width="90" />
-	 <col width="*" />
+		<col width="20%">
+		<col width="30%">
+		<col width="10%">
+		<col width="10%">
+		<col width="10%">
+		<col width="10%">
+		<col width="20%">
 	 </colgroup>
 	 <thead>
 		<tr> 
@@ -145,24 +153,19 @@ a {
 		</tr>
 	 </tbody>
   </table>
-
-  </fieldset><br><br>
+  <br>
 
    <h5 class="sub_title">데이터 분석 전문가 실기시험</h5>	
    	
-   <fieldset>
-  <legend>- 데이터 분석전문가 실기시험</legend>
-  <table class="data top" cellpadding="0" cellspacing="0" summary="출제문항 및 배점"  border="1">
-
-
+  <table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 	 <colgroup>
 	 <col width="15%" />
 	 <col width="50%" />
 	 <col width="15%">
 	 <col width="20%" />
 	  </colgroup>
-
-
 	 <thead>
 		<tr> 
 		  <th class="sect" scope="col">구분</th>
@@ -170,47 +173,29 @@ a {
 		  <th class="sect" scope="col">배점</th>
 		  <th class="sect" scope="col">시험시간</th>
 		</tr>
-		
 	 </thead>
-	
-
-
 	 <tbody>
-		
-
 		<tr> 		  
 		  <td>실기</td>
 		  <td>데이터 분석 실무</td>
 		   <td>100</td>
 		    <td>240분(4시간)</td>
 		</tr>
-
-
-		
-
-
 	 </tbody>
   </table>
-
-  </fieldset>
-
-
+<p class = "indent">
 	<font color="#FF0000"><b>※ 필기시험 합격 발표일로부터 2년이내 시행하는 실기시험 응시가능<BR>
 예) 12회 필기합격자는 2019년 4월 9일 합격자 발표 후 2021년 4월 9일 전까지 ‘시행’되는 실기시험에 계속 응시가능
-</b></font>
-	<br><br><br><br>
-	
+</b></font></p>
+
 	<h5 class="sub_title">과목별 세부 내용</h5>	
    	
-   <fieldset>
-  <legend>- 과목별 문항수</legend>
-  <table class="data top" cellpadding="0" cellspacing="0" summary="과목별 문항수"  border="1">
-
+  <table class="data top" cellpadding="0" cellspacing="0" summary="과목별 세부 내용" border="1"
+	style="margin-left: auto; margin-right: auto; text-align: center;">
 
 	 <colgroup>
-	 <col width="40%" />
-	 <col width="*" />
-	
+	 <col width="50%">
+	 <col width="300">
 	 </colgroup>
 
 	 <thead>
@@ -309,14 +294,8 @@ a {
 			</td>
 			
 		</tr>
-
-		
-
-
 	 </tbody>
   </table>
-
-  </fieldset>
 
 	</div>
 	<script>

@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -111,7 +115,9 @@ a {
 		<p class="indent">데이터아키텍처 준전문가는 전사아키텍처에 대한 지식을 바탕으로 데이터 요건분석, 데이터
 			표준화, 데이터 모델링에 대한 기본지식 및 실무적 수행 능력을 그 필수로 합니다. <br>
 			각 직무별 직무 내용은 아래 표와 같습니다. </p>
-		<table cellpadding="0" cellspacing="0" class="data" border = "1" summary="데이터아키텍처 전문가 직무 내용">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 			<colgroup>
 				<col width="300" />
 				<col width="*" />

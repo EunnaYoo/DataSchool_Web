@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -88,9 +92,9 @@ a {
 			응시자격 요건이 충족되어야 합니다.<br>
 			학력/경력기준 또는 자격기준 중 한가지의 요건이 충족될 경우 응시자격이 부여됩니다.</p>
 
-		<fieldset>
-			<legend align = "center">응시자격 및 합격기준</legend>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="응시자격 및 합격기준의 구분 및 내용">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="155" />
 					<col width="*" />
@@ -123,13 +127,12 @@ a {
 
 				</tbody>
 			</table>
-		</fieldset>
 		<br><br>
 		<font color="#FF0000"><b>* 국·내외 데이터베이스 관련 자격은 아래와 같다.</b></font>
 		<br>
-		<fieldset>
-			<legend align = "center">자격기준</legend>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="국가기술자격 및 해외 데이터베이스 자격">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="100%" />
 				</colgroup>
@@ -150,7 +153,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 		<br>
 		<hr>
 
@@ -187,8 +189,9 @@ a {
 		<hr>
 		
 		<h4 class="content_title top">☞ 응시자격 증빙서류</h4>
-		<fieldset>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="응시자격 증빙서류">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="30%" />
 					<col width="*" />
@@ -230,7 +233,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 	</div>
 	<script>
 		// Accordion 

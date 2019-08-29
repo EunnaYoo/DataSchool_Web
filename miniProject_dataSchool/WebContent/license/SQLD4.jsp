@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -83,8 +87,9 @@ a {
 		</div>
 		<h4 class="content_title top"><b>국가 공인 자격 SQLD</b></h4>
 		<h4 class="content_title top">☞ 응시자격</h4>
-		<fieldset>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="응시자격">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="100%" />
 				</colgroup>
@@ -94,12 +99,12 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 		<hr>
 
 		<h4 class="content_title top">☞ 합격기준</h4>
-		<fieldset>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="합격기준">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="50%" />
 					<col width="50%" />
@@ -117,7 +122,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 	</div>
 	<script>
 		// Accordion 

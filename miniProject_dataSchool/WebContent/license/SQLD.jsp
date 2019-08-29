@@ -35,6 +35,10 @@ a {
   padding: 5px 10px;
   background-color: #888;
  }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -129,7 +133,9 @@ a {
 		<p class="indent">SQL 개발자는 데이터모델링에 기본 지식을 바탕으로 SQL 작성, 성능 최적화 등
 			데이터베이스 개체 설계 및 구현 등에 대한 전문지식 및 실무적 수행 능력을 그 필수로 한다.</p>
 
-		<table class="data" cellpadding="0" cellspacing="0" border = "1" summary="SQL 전문가 직무 내용">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 			<colgroup>
 				<col width="300" />
 				<col width="*" />

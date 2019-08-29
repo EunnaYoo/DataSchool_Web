@@ -56,7 +56,7 @@ a {
 
 	<!-- Top menu on small screens -->
 	<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-		<div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+		<div class="w3-bar-item w3-padding-24 w3-wide">DataSchool</div>
 		<a href="javascript:void(0)"
 			class="w3-bar-item w3-button w3-padding-24 w3-right"
 			onclick="w3_open()"><i class="fa fa-bars"></i></a>
@@ -92,11 +92,12 @@ a {
 		<br>
 		<div class="button" align="left">
 		<%-- <form action="${pageContext.request.contextPath}/data"> --%>
-		     <input type = "radio" name = "answer" value = "1">1) 어떤 부하 직원보다도 연봉이 높은 상사<br>
-		     <input type = "radio" name = "answer" value = "2">2) 어떤 부하 직원보다도 연봉이 낮은 상사<br>
-		     <input type = "radio" name = "answer" value = "3">3) 어떤 상사 보다도 연봉이 높은 부하 직원<br>
-		     <input type = "radio" name = "answer" value = "4">4) 어떤 상사 보다도 연봉이 낮은 부하 직원<br>
+		     <input type = "radio" name = "answer" value = "1">1) 10, 20<br>
+		     <input type = "radio" name = "answer" value = "2">2) 10, 20, 30<br>
+		     <input type = "radio" name = "answer" value = "3">3) 10, 20, 30, 40<br>
+		     <input type = "radio" name = "answer" value = "4">4) 10, 20, 30, 40, 50<br>
 		     <input type = "hidden" name = "command" value = "exam">
+		     <br>
 		     <button onclick="serve()">정답 제출</button>
  		  </div>
  		  

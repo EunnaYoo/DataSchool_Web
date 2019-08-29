@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -89,9 +93,9 @@ a {
 		<hr>
 
 		<h4 class="sub_title">☞ SQL 전문가 자격시험(총 72문항 - 필기 70문항, 실기 2문항)</h4>
-		<fieldset>
-			<legend align = "center">SQL 전문가 자격시험 출제 문항수 및 배점</legend>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="출제문항 및 배점">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="*" />
 					<col width="100" />
@@ -141,12 +145,12 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 		<hr>
 		
 		<h4 class="sub_title">☞ 세부 내용별 문항수</h4>
-		<fieldset>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="세부 내용별 문항수">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="20%" />
 					<col width="*" />
@@ -223,7 +227,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 	</div>
 	<script>
 		// Accordion 

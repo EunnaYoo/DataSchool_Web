@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -81,15 +85,15 @@ a {
 				</tr>
 			</table>
 		</div>
+		
 		<h4 class="content_title top"><b>국가 공인 자격 SQLD</b></h4>
-
 		<h4 class="content_title top">☞ 과목 및 내용</h4>
 		<p class="indent">SQL 개발자 자격시험의 과목은 총 2과목으로 구성되어 있으며 데이터 모델링의 이해
 			과목을 바탕으로 SQL 기본 및 활용을 수행하는 능력을 검정합니다.</p>
 
-		<fieldset>
-			<legend align = "center">과목 및 내용</legend>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 
 				<colgroup>
 					<col width="30%" />
@@ -265,7 +269,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 
 	</div>
 	<script>

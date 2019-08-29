@@ -47,7 +47,7 @@
       
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <div class="site-logo mr-auto w-25"><a href="index.html">DataSchool</a></div>
+          <div class="site-logo mr-auto w-25"><a href="index.jsp">DataSchool</a></div>
 
           <div class="mx-auto text-center">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -78,8 +78,7 @@
             <div class="col-12">
               <div class="row align-items-center">
                 <div class="col-lg-6 mb-4">
-                  <h1  data-aos="fade-up" data-aos-delay="100">Learn From The Expert</h1>
-                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
+                  <h1  data-aos="fade-up" data-aos-delay="100">Join Us Now !</h1>
                 </div>
 
 				<div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">

@@ -56,7 +56,7 @@ a {
 
 	<!-- Top menu on small screens -->
 	<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-		<div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+		<div class="w3-bar-item w3-padding-24 w3-wide">DataSchool</div>
 		<a href="javascript:void(0)"
 			class="w3-bar-item w3-button w3-padding-24 w3-right"
 			onclick="w3_open()"><i class="fa fa-bars"></i></a>
@@ -92,11 +92,12 @@ a {
 		<br>
 		<div class="button" align="left">
 		<%-- <form action="${pageContext.request.contextPath}/data"> --%>
-		     <input type = "radio" name = "answer" value = "1">1) 어떤 부하 직원보다도 연봉이 높은 상사<br>
-		     <input type = "radio" name = "answer" value = "2">2) 어떤 부하 직원보다도 연봉이 낮은 상사<br>
-		     <input type = "radio" name = "answer" value = "3">3) 어떤 상사 보다도 연봉이 높은 부하 직원<br>
-		     <input type = "radio" name = "answer" value = "4">4) 어떤 상사 보다도 연봉이 낮은 부하 직원<br>
+		     <input type = "radio" name = "answer" value = "1">1) 논리 모델링의 외래키는 물리 모델에서 반드시 구현되지는 않는다<br>
+		     <input type = "radio" name = "answer" value = "2">2) 실제로 데이터베이스를 구축할 때 참고되는 모델은 개념적 데이터 모델링이다 <br>
+		     <input type = "radio" name = "answer" value = "3">3) 물리 모델링 -> 논리 모델링 -> 개념 모델링 단계로 갈수록 구체적이다 <br>
+		     <input type = "radio" name = "answer" value = "4">4) 데이터 모델링의 3가지 요소는 Process, Attributes, Relationship이다<br>
 		     <input type = "hidden" name = "command" value = "exam">
+		     <br>
 		     <button onclick="serve()">정답 제출</button>
  		  </div>
  		  

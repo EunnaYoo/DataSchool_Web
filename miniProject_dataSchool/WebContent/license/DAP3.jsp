@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -91,9 +95,9 @@ a {
 			검정과목별 출제 문항 및 배점은 아래와 같습니다.</p>
 			
 		<h5 class="sub_title">데이터아키텍처 전문가 자격시험(총 101문항 - 필기 100문항, 실기1문항)</h5>
-		<fieldset>
-			<legend align = "center">출제문항 및 배점</legend>
-			<table cellpadding="0" cellspacing="0" class="data top" border = "1" summary="과목별 문항수 및 배점">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="200" />
 					<col width="100" />
@@ -160,12 +164,12 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 		<br>
 		
 		<h5 class="sub_title">세부 내용별 문항수</h5>
-		<fieldset>
-			<table class="data top" cellpadding="0" cellspacing="0" border = "1" summary="세부 내용별 문항수">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<colgroup>
 					<col width="20%" />
 					<col width="*" />
@@ -302,7 +306,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 	</div>
 	<script>
 		// Accordion 

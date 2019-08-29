@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -101,7 +105,6 @@ a {
 					수 있다.<br> ② 사업주는 근로자의 채용·승진·전보, 그 밖에 인사상의 조치를 하는 경우 해당 분야의 국가자격
 					또는 공인자격을 취득한 자를 우대할 수 있다.
 				</p>
-
 			</div>
 		</div>
 		<hr>
@@ -136,7 +139,9 @@ a {
 		<h4 class="content_title">☞ SQL 전문가의 직무</h4>
 		<p class="indent">SQL 전문가는 데이터모델링에 기본 지식을 바탕으로 SQL 작성, 성능 최적화 등
 			데이터베이스 개체 설계 및 구현 등에 대한 전문지식 및 실무적 수행 능력을 그 필수로 한다.</p>
-		<table class="data" cellpadding="0" cellspacing="0" border = "1" summary="SQL 전문가 직무 내용">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 			<colgroup>
 				<col width="300" />
 				<col width="*" />

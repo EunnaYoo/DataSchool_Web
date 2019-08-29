@@ -35,7 +35,9 @@ a {
   padding: 5px 10px;
   background-color: #888;
  }
-
+.list{
+	text-align : left;
+}
 </style>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 
@@ -72,38 +74,37 @@ a {
 		</header>
 		<div class="contents" align="left">
 			<table valign="bottom">
+			<tr>
 				<td><a href="ADP.jsp" class="tab">자격소개</a></td>
 				<td><a href="ADP2.jsp" class="tab">시험주요내용</a></td>
 				<td><a href="ADP3.jsp" class="tab">출제문항및배점</a></td>
 				<td><a href="ADP4.jsp" class="tab">응시자합격기준</a></td>
+			</tr>
 			</table>
 		</div>
-		<h4 class="content_title top">ADP</h4>
- <h4 class="content_title top">응시자격</h4>
-
+		
+		<h4 class="content_title top"><b>국가 공인 자격 ADP</b></h4>
+ <h4 class="content_title top">☞ 응시자격</h4>
 <p class="indent">
-데이터 분석 전문가 자격검정 시험의 응시자격은 아래와 같으며 응시자격은 필기시험일 기준 시험일 이전에 응시자격 요건이 충족되어야 합니다. 경력/학력기준 또는 자격보유기준 중 한가지의 요건이 충족될 경우 응시자격이 부여됩니다.
+데이터 분석 전문가 자격검정 시험의 응시자격은 아래와 같으며<br>
+응시자격은 필기시험일 기준 시험일 이전에 응시자격 요건이 충족되어야 합니다.<br>
+경력/학력기준 또는 자격보유기준 중 한가지의 요건이 충족될 경우 응시자격이 부여됩니다.
 </p>
   
-  <fieldset>
-  <legend>응시자격</legend>
-  <table class="data top" cellpadding="0" cellspacing="0" summary="응시자격"  border="1">
+ <table class="data top" cellpadding="0" cellspacing="0"
+			summary="과목별 세부 내용" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 
 	 <colgroup>
-	 <col width="30%" />
-	 <col width="*" />
+	 	<col width="50%" />
+		<col width="50%" />
 	 </colgroup>
-
-
 	 <thead>
 		<tr> 
 		  <th scope="col" colspan="2">응시자격</th>		 	  
 		</tr>
 	 </thead>
-
-
 	 <tbody>
-		
 		<tr>
 			<td>경력/학력기준</td>
 			<td>
@@ -125,8 +126,6 @@ a {
 				</ul>	
 			</td>
 		</tr>
-
-
 		<tr>
 			<td>자격기준</td>
 			<td>
@@ -138,34 +137,26 @@ a {
 		
 	 </tbody>
   </table>
-  </fieldset>
- <br><br>	
+ <hr>	
   <!-- 합격 기준 -->
-  <h4 class="content_title top">합격기준</h4>
-  
+  <h4 class="content_title top">☞ 합격기준</h4>
   <p class="indent">
   데이터 분석 전문가 자격검정 시험의 합격기준은 아래와 같으며 실기시험 합격자는 응시자격 증빙서류를 제출하여야 합니다.
   </p>
-   <fieldset>
-  <legend>합격기준</legend>
-  <table class="data top" cellpadding="0" cellspacing="0" summary="합격기준" border="1">
-
+  <table class="data top" cellpadding="0" cellspacing="0"
+			summary="과목별 세부 내용" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 	 <colgroup>
 	 <col width="20%" />
 	 <col width="40%" />
 	 <col width="*" />
-	 
 	 </colgroup>
-
-
 	 <thead>
 		<tr> 
 		  <th scope="col" colspan="2">합격기준</th>
 		   <th scope="col">과락기준</th>
 		</tr>
 	 </thead>
-
-
 	 <tbody>
 		
 		<tr>
@@ -173,48 +164,34 @@ a {
 			<td>총점 100점 기준 70점 이상</td>
 			<td>과목별 40% 미만</td>
 		</tr>
-        
-        
         <tr>
 			<td>실기합격</td>		
 			<td colspan="2">실기 총점 100점 기준 75점 이상</td>
 		</tr>
-
-
 		<tr>			
 			<td>최종합격</td>
 			<td colspan="2">응시자격심의 서류 통과자</td>			
-			
 		</tr>
 	 </tbody>
   </table>
-  </fieldset>
-  <!-- 합격 기준 끝 -->
- 
-  <br><br>
-  <!-- 응시자격 증빙서류 -->
- <h4 class="content_title top">응시자격 증빙서류</h4>
+  <hr>
+  
+ <h4 class="content_title top">☞ 응시자격 증빙서류</h4>
 
-  <fieldset>
-  <legend>응시자격 증빙서류</legend>
-  <table class="data top" cellpadding="0" cellspacing="0" summary="응시자격 증빙서류" border="1">
-
+ <table class="data top" cellpadding="0" cellspacing="0"
+			summary="과목별 세부 내용" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 	 <colgroup>
 	 <col width="30%" />
 	 <col width="*" />
 	 </colgroup>
-
-
 	 <thead>
 		<tr> 
 		  <th scope="col">구분</th>
 		  <th scope="col">내용</th>		 	  
 		</tr>
 	 </thead>
-
-
 	 <tbody>
-		
 		<tr>
 			<td>제출서류</td>
 			<td>
@@ -231,8 +208,6 @@ a {
 				</ul>	
 			</td>
 		</tr>
-
-
 		<tr>
 			<td>제출시기</td>
 			<td>
@@ -253,9 +228,6 @@ a {
 		</tr>
 	 </tbody>
   </table>
-  </fieldset>
-  
-  <!-- 응시자격 증빙서류 끝 -->
 
 
 	</div>

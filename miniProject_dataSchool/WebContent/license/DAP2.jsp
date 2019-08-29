@@ -38,6 +38,10 @@ a {
 	padding: 5px 10px;
 	background-color: #888;
 }
+.list{
+	text-align : left;
+}
+
 </style>
 
 <body class="w3-content" style="max-width: 1200px">
@@ -88,9 +92,9 @@ a {
 		<h4 class="content_title top">☞ 과목 및 내용</h4>
 		<p>데이터아키텍처 전문가 자격시험의 과목은 총 6과목으로 구성되어 있으며 전사아키텍처 이해를 바탕으로 데이터 요건
 			분석, 데이터 표준화, 데이터 모델링, 데이터베이스 설계와 이용, 데이터 품질 관리를 수행하는 능력을 검정합니다.</p>
-		<fieldset>
-			<table class="data top" cellpadding="0" cellspacing="0" border="1"
-				summary="과목 및 내용">
+		<table class="data top" cellpadding="0" cellspacing="0"
+			summary="출제문항 및 배점" border="1"
+			style="margin-left: auto; margin-right: auto; text-align: center;">
 				<COLGROUP>
 					<COL>
 					<COL width="30%" />
@@ -530,9 +534,8 @@ a {
 					</TR>
 				</TBODY>
 			</TABLE>
-		</fieldset>
+			<br><br>
 
-		<fieldset>
 			<table cellpadding="0" cellspacing="0" class="data" border="1" summary="실기 (설계)">
 				<colgroup>
 					<COL width="30%" />
@@ -564,7 +567,6 @@ a {
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
 	</div>
 	<script>
 		// Accordion 
