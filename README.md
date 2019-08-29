@@ -6,6 +6,7 @@ Mini Project : Data School Project
 * Language : Java, Java Script Html, CSS, <br>
 * Library : Lombok, Jsoup, Jdbc <br>
 * DBMS : Oracle <br>
+* Web : Servlet, JSP <br>
 * Crawling Site : 네이버 뉴스(https://search.naver.com/search.naver?where=news&sm=tab_jum&query=데이터)
 
 ### 2. Project Document
