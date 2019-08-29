@@ -140,11 +140,18 @@ public class DataController extends HttpServlet {
 	
 	public void showResult(HttpServletRequest request, HttpServletResponse response) {
 		String url = "Test/result21SQLD.jsp";
+		int score = 0;
 		try {
+			for(int i = 0; i < DataService.getAllInputYesNo().size(); i++) {
+				if( DataService.getAllInputYesNo().get(i).equals("O")) {
+					score += 20;
+				}
+			}
 			request.setAttribute("allTestNum", DataService.getAllTestNum());
 			request.setAttribute("allInputAnswer", DataService.getAllInputAnswer());
 			request.setAttribute("allAnswer", DataService.getAllAnswer());
 			request.setAttribute("allYesNo", DataService.getAllInputYesNo());
+			request.setAttribute("score", score);
 			request.getRequestDispatcher(url).forward(request, response);
 		} catch (Exception s) {
 			s.printStackTrace();

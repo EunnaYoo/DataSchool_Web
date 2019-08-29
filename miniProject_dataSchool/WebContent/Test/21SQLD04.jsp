@@ -116,14 +116,12 @@ a {
 		function serve() {
 		  var xhttp = new XMLHttpRequest();
 		  xhttp.onreadystatechange = function() {
-			  console.log("hi");
 		    if (this.readyState == 4 && this.status == 200) {
-		    	console.log("bye");
 		    alert("입력이 완료되었습니다");
 		    }
 		  };
 		  
-		  var id = ${sessionScope.id};
+		  var id = "${sessionScope.id}";
 		  var inputAnswer = document.getElementsByName('answer');
 		  var answer_value; // 여기에 선택된 radio 버튼의 값이 담기게 된다.
 		  for(var i=0; i<inputAnswer.length; i++) {

@@ -68,12 +68,8 @@ public class DataService {
 		}
 	}
 	
-	public static boolean insertInput(String id, String testIdenty, int testNum, int inputAnswer) throws MessageException {
-		try {
-			return UserTestDAO.insertInput(id, testIdenty, testNum, inputAnswer);
-		} catch (SQLException e) {
-			throw new MessageException("유효하지 않은 정보입니다");
-		}
+	public static boolean insertInput(String id, String testIdenty, int testNum, int inputAnswer) throws SQLException {
+		return UserTestDAO.insertInput(id, testIdenty, testNum, inputAnswer);
 	}
 	
 	public static int getInputAnswer(int testNum) throws MessageException {

@@ -112,6 +112,16 @@ a {
 			</c:forEach>
 		</table>
 		<br>
+		<br>
+					<c:choose>
+				<c:when test="${requestScope.score >= 60}">
+					${sessionScope.id}님은  ${requestScope.score}점으로 합격입니다.
+				</c:when>
+				<c:when test="${requestScope.score < 60}">
+					${sessionScope.id}님은  ${requestScope.score}점으로 불합격입니다.
+				</c:when>
+			</c:choose>
+		<br>
 	</div>
 	<script>
 		// Accordion 

@@ -53,7 +53,7 @@ CREATE TABLE outuser (
 );
 
 ALTER TABLE test ADD FOREIGN KEY (test_identy) REFERENCES license (test_identy);
-ALTER table usertest ADD constraint prevent_pk primary key (id,test_identy,test_num);
+ALTER table usertest ADD CONSTRAINT prevent_pk PRIMARY KEY (id,test_identy,test_num);
 ALTER TABLE usertest ADD FOREIGN KEY (test_identy) REFERENCES license (test_identy);
 ALTER TABLE usertest ADD FOREIGN KEY (id) REFERENCES users (id);
 ALTER TABLE testresult ADD CONSTRAINT result_pk PRIMARY KEY (id,test_identy,test_num);

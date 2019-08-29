@@ -125,7 +125,7 @@ a {
 		    }
 		  };
 		  
-		  var id = ${sessionScope.id};
+		  var id = "${sessionScope.id}";
 		  var inputAnswer = document.getElementsByName('answer');
 		  var answer_value; // 여기에 선택된 radio 버튼의 값이 담기게 된다.
 		  for(var i=0; i<inputAnswer.length; i++) {
