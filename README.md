@@ -11,6 +11,6 @@ Mini Project : Data School Project
 ### 2. Project Document
 
 * ppt자료 : DataSchool_PPT.pdf <br>
-* ERMaster : ERMaster : dataSchoolERD.erm <br>
+* ERMaster : dataSchoolERD.erm <br>
 * 요구사항 정의서 : Requirement Document.pdf
 
